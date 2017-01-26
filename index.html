@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ongbook">
+
+<head>
+    <meta charset="utf-8">
+    <base href="/">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Ongbook</title>
+	<link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/sb-admin-2.css">
+	<link rel="stylesheet" href="lib/AngularJS-Toaster/toaster.min.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="assets/css/font-awesome.css"/>
+	<link rel="stylesheet" href="lib/fullpage.js/jquery.fullPage.css">
+</head>
+
+<body>
+  <toaster-container></toaster-container>
+  <div ui-view="content"></div>
+
+  <script src="lib/jquery/dist/jquery.min.js"></script>
+  <script src="lib/angular/angular.min.js"></script>
+  <script src="lib/bootstrap/dist/js/bootstrap.js"></script>
+
+  <!-- Módulos externos-->
+  <script src="assets/js/sb-admin-2.js"></script>
+  <script src="lib/angular-ui-router/release/angular-ui-router.js"></script>
+  <script src="lib/angular-bootstrap/ui-bootstrap.js"></script>
+  <script src="lib/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+  <script src="lib/angular-route/angular-route.js"></script>
+  <script src="lib/ng-file-upload/ng-file-upload.js"></script>
+  <script src="lib/angular-messages/angular-messages.js"></script>
+  <script src="lib/angular-animate/angular-animate.min.js"></script>
+  <script src="lib/AngularJS-Toaster/toaster.min.js"></script>
+  <script src="lib/fullpage.js/vendors/jquery.slimscroll.min.js"></script>
+  <script src="lib/fullpage.js/dist/jquery.fullpage.min.js"></script>
+  <script src="lib/angular-fullpage.js/angular-fullpage.min.js"></script>
+  
+
+  <!-- Módulo principal da aplicação -->
+  <script src="www/app.js"></script>
+  <script src="www/routes.js"></script>
+  <!-- Controllers  -->
+  <script src="www/controllers/home/homeCtrl.js"></script>
+  <script src="www/controllers/dashboard/config/configCtrl.js"></script>
+  <script src="www/controllers/dashboard/entities/entitiesCtrl.js"></script>
+  <script src="www/controllers/dashboard/dashboardCtrl.js"></script>
+  <script src="www/controllers/navbar-dashboard/navbarCtrl.js"></script>
+  <script src="www/controllers/navbar-institucional/institucionalCtrl.js"></script>
+
+  <!-- Directives -->
+  <script src="www/directives/navbar/navbar-top-dashboard.js"></script>
+  <script src="www/directives/dashboard/dashboard.js"></script>
+  <script src="www/directives/navbar/navbar-home-institucional.js"></script>
+
+  <!-- Services  -->
+  <script src="www/services/entities/entitiesServiceApi.js"></script>
+  <script src="www/services/config/configServiceApi.js"></script>
+
+
+  <!-- Componentes -->
+
+  <!-- Config -->
+  <script src="www/value/config.js"></script>
+
+</body>
+
+</html>
