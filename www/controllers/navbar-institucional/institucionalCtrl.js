@@ -13,7 +13,7 @@
 
 			function register() {
 				var modalInstance = $uibModal.open({
-				 	templateUrl: '../../../templates/instucional/registerModal/registerModal.html',				 	
+				 	templateUrl: '../../../templates/instucional/register-modal/register-modal.html',
 				 	size:'md',
 				 	backdrop:'static',
 				 	controller: function ($uibModalInstance) {
@@ -28,7 +28,7 @@
 
 				 		function sendRegister(objParam) {
 				 			localStorage.setItem('user',JSON.stringify(objParam));
-				 				if(localStorage.getItem('user')){				 			
+				 				if(localStorage.getItem('user')){
 				 					toaster.pop({
 							                type: 'success',
 							                title: 'Sucesso',
@@ -36,7 +36,7 @@
 							                timeout: 3000
 							            });
 				 				$uibModalInstance.dismiss('cancel');
-			 					// $state.go('dashboard');				 					
+			 					// $state.go('dashboard');
 				 				}
 				 		}
 
