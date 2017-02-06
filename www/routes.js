@@ -59,6 +59,38 @@
 	        }
 	      }
 	    })
+	    .state('register-social-entity', {
+	      url: '/cadastro-entidade-social',
+	      views: {
+	        'content@':{
+	          templateUrl: '../templates/register-social-entity/index.html',
+	          controller: 'registerSocialEntityIndexCtrl',
+	          controllerAs: 'vm'
+	        }
+	      }
+	    })
+	    .state('register-essential-one', {
+	    	parent: 'register-social-entity',
+	      url: '/essenciais-1',
+	      views: {
+	        'register-social-entity@register-social-entity':{
+	          templateUrl: '../templates/register-social-entity/essential-one/essential-one.html',
+	          controller: 'registerEssentialOneCtrl',
+	          controllerAs: 'vm'
+	        }
+	      }
+	    })
+	    .state('register-essential-two', {
+	    	parent: 'register-social-entity',
+	      url: '/essenciais-2',
+	      views: {
+	        'register-social-entity@register-social-entity':{
+	          templateUrl: '../templates/register-social-entity/essential-two/essential-two.html',
+	          controller: 'registerEssentialTwoCtrl',
+	          controllerAs: 'vm'
+	        }
+	      }
+	    })
 	    ;
 	    $urlRouterProvider.otherwise('/');
 	  }]);

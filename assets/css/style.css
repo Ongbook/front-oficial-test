@@ -1,3 +1,85 @@
+@CHARSET "ISO-8859-1";
+body,header,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
+form,fieldset,input,textarea,p,blockquote,th,td {
+  padding: 0;
+  margin: 0;
+}
+
+
+
+
+
+
+#register-social-entity{
+  background: linear-gradient(180deg, #105596 30%, white 80%, #000 100%);
+  height: 100%;
+  min-height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+
+
+}
+
+.rounded{
+  margin-top: 40px;
+  margin-bottom: 40px;
+  background-color: white;
+  border-radius: 5px;
+  padding: 1px 20px 20px 20px;
+}
+
+.register-title-content{
+  margin-top: 20px;
+}
+
+#register-content-step-1{
+  padding: 60px 0 30px 0;
+}
+
+#register-content-step-2{
+  padding: 40px 0 30px 0;
+}
+
+#btn-cep-search{
+  font-size: 17px;
+}
+
+#register-upload-img{
+  background-color: #f7f7f7;
+  padding: 12px 0 12px 0;
+  width: 146px;
+  max-width: 146px;
+  min-width: 146px;
+  margin: 0 auto;
+  margin-top: 90px;
+  border-radius: 4px 4px 3px 3px;
+
+}
+
+#icone-upload-img{
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+
+#btn-choose-file{
+  width: 146px;
+  max-width: 146px;
+  min-width: 146px;
+  margin: 0 auto;
+
+}
+
+.btn-register-content{
+  margin-top: 60px;
+}
+
+
+
+
+
 /*@CHARSET "ISO-8859-1";
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
 form,fieldset,input,textarea,p,blockquote,th,td {
@@ -233,7 +315,7 @@ app-header{
 }
 
 #section1 {
-   
+
   }
   #section1 #video-background {
     position: absolute;
