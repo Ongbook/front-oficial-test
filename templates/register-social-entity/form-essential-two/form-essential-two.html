@@ -1,8 +1,8 @@
 <div class="col-md-12" ng-controller="registerEssentialTwoCtrl as vm">
 
-  <h2 class="register-title-content">Essenciais</h2>
+  <h2 class="register-title-content">Dados essenciais</h2>
 
-  <div class="col-md-12 text-muted" id="register-content-step-2">
+  <div class="col-md-12 text-muted register-form-content">
 
     <form  class="form">
 
@@ -24,6 +24,12 @@
         <div class="form-group">
           <label for="ano-fundacao">Ano de fundação</label>
           <input type="number" class="form-control" id="ano-fundacao">
+        </div>
+      </div>
+
+      <div class="col-md-4 col-md-offset-4" id="atuation-area-input">
+        <div class="form-group form-group-lg">
+          <input type="text" class="form-control" placeholder="Área de atuação...">
         </div>
       </div>
 
@@ -55,8 +61,8 @@
       </div>
 
       <div class="col-md-12">
-        <button type="button" class="btn btn-default btn-lg pull-left" ui-sref="register-essential-one" ng-click="">Anterior</button>
-        <button type="submit" class="btn btn-primary btn-lg pull-right" ng-click="">Próximo</button>
+        <button type="button" class="btn btn-default btn-lg pull-left" ng-click="vm.stateGoPrevious();">Anterior</button>
+        <button type="submit" class="btn btn-primary btn-lg pull-right" ng-click="vm.stateGoNext();">Próximo</button>
       </div>
 
     </form>

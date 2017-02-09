@@ -39,7 +39,11 @@ form,fieldset,input,textarea,p,blockquote,th,td {
   padding: 60px 0 30px 0;
 }
 
-#register-content-step-2{
+#atuation-area-input{
+  padding: 20px 0 0 0;
+}
+
+.register-form-content{
   padding: 40px 0 30px 0;
 }
 
