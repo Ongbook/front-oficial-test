@@ -74,7 +74,7 @@
 	      url: '/essenciais-1',
 	      views: {
 	        'register-social-entity@register-social-entity':{
-	          templateUrl: '../templates/register-social-entity/essential-one/essential-one.html',
+	          templateUrl: '../templates/register-social-entity/form-essential-one/form-essential-one.html',
 	          controller: 'registerEssentialOneCtrl',
 	          controllerAs: 'vm'
 	        }
@@ -85,8 +85,19 @@
 	      url: '/essenciais-2',
 	      views: {
 	        'register-social-entity@register-social-entity':{
-	          templateUrl: '../templates/register-social-entity/essential-two/essential-two.html',
+	          templateUrl: '../templates/register-social-entity/form-essential-two/form-essential-two.html',
 	          controller: 'registerEssentialTwoCtrl',
+	          controllerAs: 'vm'
+	        }
+	      }
+	    })
+	    .state('register-institutional', {
+	    	parent: 'register-social-entity',
+	      url: '/institucionais',
+	      views: {
+	        'register-social-entity@register-social-entity':{
+	          templateUrl: '../templates/register-social-entity/form-institutional/form-institutional.html',
+	          controller: 'registerInstitutionalCtrl',
 	          controllerAs: 'vm'
 	        }
 	      }

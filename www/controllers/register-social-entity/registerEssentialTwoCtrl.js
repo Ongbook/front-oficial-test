@@ -2,14 +2,24 @@
   'use strict';
 
   angular
-    .module('og.controllers')
-    .controller('registerEssentialTwoCtrl', registerEssentialTwoCtrl);
+  .module('og.controllers')
+  .controller('registerEssentialTwoCtrl', registerEssentialTwoCtrl, '$state');
 
-    registerEssentialTwoCtrl.$inject = [];
+  registerEssentialTwoCtrl.$inject = ['$state'];
 
-    function registerEssentialTwoCtrl() {
-      var vm = this;
+  function registerEssentialTwoCtrl($state) {
+    var vm = this;
+    vm.stateGoNext = stateGoNext;
+    vm.stateGoPrevious = stateGoPrevious;
 
+    function stateGoNext() {
+      $state.go('register-institutional');
     }
+
+    function stateGoPrevious() {
+      $state.go('register-essential-one');
+    }
+
+  }
 
 })();
