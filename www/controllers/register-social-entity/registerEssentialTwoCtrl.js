@@ -9,12 +9,7 @@
 
   function registerEssentialTwoCtrl($state) {
     var vm = this;
-    vm.stateGoNext = stateGoNext;
     vm.stateGoPrevious = stateGoPrevious;
-
-    function stateGoNext() {
-      $state.go('register-institutional');
-    }
 
     function stateGoPrevious() {
       $state.go('register-essential-one');

@@ -39,12 +39,20 @@ form,fieldset,input,textarea,p,blockquote,th,td {
   padding: 60px 0 30px 0;
 }
 
+#input-area-atuacao{
+  margin-top: 30px
+}
+
 #atuation-area-input{
   padding: 20px 0 0 0;
 }
 
 .register-form-content{
   padding: 40px 0 30px 0;
+}
+
+#entity-address-register{
+  margin-top: 10px;
 }
 
 #btn-cep-search{
@@ -58,9 +66,8 @@ form,fieldset,input,textarea,p,blockquote,th,td {
   max-width: 146px;
   min-width: 146px;
   margin: 0 auto;
-  margin-top: 90px;
+  margin-top: 30px;
   border-radius: 4px 4px 3px 3px;
-
 }
 
 #icone-upload-img{
@@ -76,8 +83,12 @@ form,fieldset,input,textarea,p,blockquote,th,td {
 
 }
 
-.btn-register-content{
-  margin-top: 60px;
+#btn-register-content-1{
+  margin-top: 50px;
+}
+
+.btn-register-content-2{
+  margin-top: 10px;
 }
 
 

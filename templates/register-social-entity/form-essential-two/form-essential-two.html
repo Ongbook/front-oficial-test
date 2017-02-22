@@ -6,70 +6,177 @@
 
     <form  class="form">
 
-      <div class="col-md-4">
-        <div class="form-group">
-          <label for="nome-fantasia">Nome fantasia <i class="text-danger" title="Campo obrigatório">*</i></label>
-          <input type="text" class="form-control" id="nome-fantasia" required>
+      <div class="row">
+
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="nome-fantasia">Nome fantasia <i class="text-danger" title="Campo obrigatório">*</i></label>
+            <input type="text" class="form-control" id="nome-fantasia" required>
+          </div>
         </div>
+
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="razao-social">Razão Social <i class="text-danger" title="Campo obrigatório">*</i></label>
+            <input type="text" class="form-control" id="razao-social" required>
+          </div>
+        </div>
+
+        <div class="col-md-2">
+          <div class="form-group">
+            <label for="ano-fundacao">Ano de fundação</label>
+            <input type="number" class="form-control" id="ano-fundacao">
+          </div>
+        </div>
+
       </div>
 
-      <div class="col-md-6">
-        <div class="form-group">
-          <label for="razao-social">Razão Social <i class="text-danger" title="Campo obrigatório">*</i></label>
-          <input type="text" class="form-control" id="razao-social" required>
+      <div class="row">
+
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="tel">Telefone <i class="text-danger" title="Campo obrigatório">*</i></label>
+            <input type="tel" class="form-control" id="tel" required>
+          </div>
         </div>
+
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="email">E-mail <i class="text-danger" title="Campo obrigatório">*</i></label>
+            <input type="email" class="form-control" id="email" required>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="sigla">Sigla <i class="text-danger" title="Campo obrigatório">*</i></label>
+            <input type="text" class="form-control" id="sigla" required placeholder="Url personalizada" popover-placement="bottom" uib-popover="Link para o perfil da Entidade. Exemplo: http://ongbook.org/acaci"  popover-trigger="'focus'">
+          </div>
+        </div>
+
       </div>
 
-      <div class="col-md-2">
-        <div class="form-group">
-          <label for="ano-fundacao">Ano de fundação</label>
-          <input type="number" class="form-control" id="ano-fundacao">
+
+      <div class="row">
+
+        <div class="col-md-12" id="entity-address-register">
+          <div class="form-group">
+            <h5>Endereço <i class="text-danger" title="Campos obrigatórios">*</i></h5>
+          </div>
         </div>
+
+        <div class="col-md-3">
+          <div class="form-group input-group">
+            <input type="number" class="form-control" id="cep" placeholder="CEP" required>
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="button"><i class="fa fa-search" id="btn-cep-search"></i></button>
+            </span>
+          </div>
+        </div>
+
+        <div class="col-md-7">
+          <div class="form-group">
+            <input type="text" class="form-control" id="logradouro" placeholder="Logradouro" required>
+          </div>
+        </div>
+
+        <div class="col-md-2">
+          <div class="form-group">
+            <input type="number" class="form-control" id="numero" placeholder="Nº" required>
+          </div>
+        </div>
+
       </div>
 
-      <div class="col-md-4 col-md-offset-4" id="atuation-area-input">
-        <div class="form-group form-group-lg">
-          <input type="text" class="form-control" placeholder="Área de atuação...">
+      <div class="row">
+
+        <div class="col-md-4">
+
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                <input type="text" class="form-control" id="complemento" placeholder="Complemento">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                <input type="text" class="form-control" id="bairro" placeholder="Bairro">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                <input type="text" class="form-control" id="cidade" placeholder="Cidade">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                <select class="form-control" id="uf">
+                  <option value="" disabled selected>UF</option>
+                  <option value="AC">Acre</option>
+                  <option value="AL">Alagoas</option>
+                  <option value="AP">Amapá</option>
+                  <option value="AM">Amazonas</option>
+                  <option value="BA">Bahia</option>
+                  <option value="CE">Ceará</option>
+                  <option value="DF">Distrito Federal</option>
+                  <option value="ES">Espirito Santo</option>
+                  <option value="GO">Goiás</option>
+                  <option value="MA">Maranhão</option>
+                  <option value="MS">Mato Grosso do Sul</option>
+                  <option value="MT">Mato Grosso</option>
+                  <option value="MG">Minas Gerais</option>
+                  <option value="PA">Pará</option>
+                  <option value="PB">Paraíba</option>
+                  <option value="PR">Paraná</option>
+                  <option value="PE">Pernambuco</option>
+                  <option value="PI">Piauí</option>
+                  <option value="RJ">Rio de Janeiro</option>
+                  <option value="RN">Rio Grande do Norte</option>
+                  <option value="RS">Rio Grande do Sul</option>
+                  <option value="RO">Rondônia</option>
+                  <option value="RR">Roraima</option>
+                  <option value="SC">Santa Catarina</option>
+                  <option value="SP">São Paulo</option>
+                  <option value="SE">Sergipe</option>
+                  <option value="TO">Tocantins</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                <input type="text" class="form-control" id="pais" placeholder="País">
+              </div>
+            </div>
+          </div>
+
         </div>
+
+        <div class="col-md-8">
+
+          <ng-map center="[40.74, -74.18]" style="height: 230px;" drag>
+            <marker position="[40.74, -74.18]" title="Hello" draggable="true"></marker>
+          </ng-map>
+          <p class="help-block"><small>Posicione o marcador o mais próximo possível.</small></p>
+
+        </div>
+
       </div>
 
       <div class="col-md-12">
-        <div class="form-group">
-          <h4>Endereço</h4>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="form-group input-group">
-          <input type="text" class="form-control" id="cep" placeholder="CEP" required>
-          <span class="input-group-btn">
-            <button class="btn btn-default" type="button"><i class="fa fa-search" id="btn-cep-search"></i></button>
-          </span>
-        </div>
-      </div>
-
-      <div class="col-md-6">
-        <div class="form-group">
-          <input type="text" class="form-control" id="logradouro" placeholder="Logradouro" required>
-        </div>
-      </div>
-
-      <div class="col-md-2">
-        <div class="form-group">
-          <input type="number" class="form-control" id="numero" placeholder="Nº" required>
-        </div>
-      </div>
-
-      <div class="col-md-12">
-        <button type="button" class="btn btn-default btn-lg pull-left" ng-click="vm.stateGoPrevious();">Anterior</button>
-        <button type="submit" class="btn btn-primary btn-lg pull-right" ng-click="vm.stateGoNext();">Próximo</button>
+        <button type="button" class="btn btn-default btn-lg pull-left btn-register-content-2" ng-click="vm.stateGoPrevious();">Anterior</button>
+        <button type="submit" class="btn btn-primary btn-lg pull-right btn-register-content-2" ng-click="">Cadastrar</button>
       </div>
 
     </form>
 
   </div>
-
-
-
 
 </div>
