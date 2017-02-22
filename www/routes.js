@@ -91,17 +91,6 @@
 	        }
 	      }
 	    })
-	    .state('register-institutional', {
-	    	parent: 'register-social-entity',
-	      url: '/institucionais',
-	      views: {
-	        'register-social-entity@register-social-entity':{
-	          templateUrl: '../templates/register-social-entity/form-institutional/form-institutional.html',
-	          controller: 'registerInstitutionalCtrl',
-	          controllerAs: 'vm'
-	        }
-	      }
-	    })
 	    ;
 	    $urlRouterProvider.otherwise('/');
 	  }]);

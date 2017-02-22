@@ -9,13 +9,11 @@
 
   function registerEssentialOneCtrl($state) {
     var vm = this;
-    vm.stateGo = stateGo;
+    vm.stateGoNext = stateGoNext;
 
-    function stateGo() {
+    function stateGoNext() {
       $state.go('register-essential-two');
     }
-
-
 
   }
 
