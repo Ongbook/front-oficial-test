@@ -3,7 +3,8 @@
 
 	angular
 		.module('ongbook')
-		.config(['$routeProvider','$locationProvider','$urlRouterProvider','$stateProvider',function($routeProvider,$locationProvider,$urlRouterProvider,$stateProvider){
+		.config(['$locationProvider','$urlRouterProvider','$stateProvider',
+		function($locationProvider,$urlRouterProvider,$stateProvider){
 		$locationProvider.html5Mode(true);
 		$stateProvider
 	    .state('home', {

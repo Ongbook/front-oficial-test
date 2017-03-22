@@ -7,7 +7,6 @@
 	angular.module('og.components',[]);
 
 	angular.module('ongbook',[
-		'ngRoute',
 		'ui.router',
 		'ngMessages',
 		'ngAnimate',
