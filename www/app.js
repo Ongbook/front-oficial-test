@@ -13,7 +13,6 @@
 		'ngAnimate',
 		'toaster',
 		'ui.bootstrap',
-		'ngMap',
 		'ngFileUpload',
 		'fullPage.js',
 		'og.controllers',
