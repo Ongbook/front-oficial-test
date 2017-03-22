@@ -5,9 +5,9 @@
 		.module('og.controllers')
 		.controller('institucionalCtrl', institucionalCtrl);
 
-		institucionalCtrl.$inject = ['$uibModal','$scope','toaster'];
+		institucionalCtrl.$inject = ['$uibModal','$scope','toaster', '$state'];
 
-		function institucionalCtrl($uibModal,$scope, toaster) {
+		function institucionalCtrl($uibModal,$scope, toaster, $state) {
 			var vm = this;
 			vm.register = register;
 
@@ -35,8 +35,8 @@
 							                body: 'Usuário cadastrado com sucesso.',
 							                timeout: 3000
 							            });
-				 				$uibModalInstance.dismiss('cancel');
-			 					// $state.go('dashboard');
+				 				modalInstance.close();
+			 					$state.go('register-social-entity');
 				 				}
 				 		}
 
