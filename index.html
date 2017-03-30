@@ -22,7 +22,7 @@
 
 <body>
   <toaster-container></toaster-container>
-  <div ui-view="content"></div>
+  <ui-view></ui-view>
 
   <script src="lib/jquery/dist/jquery.min.js"></script>
   <script src="lib/angular/angular.min.js"></script>
@@ -33,15 +33,12 @@
   <script src="lib/angular-ui-router/release/angular-ui-router.js"></script>
   <script src="lib/angular-bootstrap/ui-bootstrap.js"></script>
   <script src="lib/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
-  <script src="lib/angular-route/angular-route.js"></script>
-  <script src="lib/ng-file-upload/ng-file-upload.js"></script>
   <script src="lib/angular-messages/angular-messages.js"></script>
   <script src="lib/angular-animate/angular-animate.min.js"></script>
   <script src="lib/AngularJS-Toaster/toaster.min.js"></script>
   <script src="lib/fullpage.js/vendors/jquery.slimscroll.min.js"></script>
   <script src="lib/fullpage.js/dist/jquery.fullpage.min.js"></script>
   <script src="lib/angular-fullpage.js/angular-fullpage.min.js"></script>
-  <script src="lib/ngmap/build/scripts/ng-map.min.js"></script>
 
 
   <!-- Módulo principal da aplicação -->
@@ -55,9 +52,9 @@
   <script src="www/controllers/dashboard/dashboardCtrl.js"></script>
   <script src="www/controllers/navbar-dashboard/navbarCtrl.js"></script>
   <script src="www/controllers/navbar-institucional/institucionalCtrl.js"></script>
-  <script src="www/controllers/register-social-entity/registerSocialEntityIndexCtrl.js"></script>
-  <script src="www/controllers/register-social-entity/registerEssentialOneCtrl.js"></script>
-  <script src="www/controllers/register-social-entity/registerEssentialTwoCtrl.js"></script>
+  <script src="www/controllers/register-social-entity/registerSocialEntityCtrl.js"></script>
+  <!-- <script src="www/controllers/register-social-entity/registerEssentialOneCtrl.js"></script>
+  <script src="www/controllers/register-social-entity/registerEssentialTwoCtrl.js"></script> 
 
   <!-- Directives -->
   <script src="www/directives/navbar/navbar-top-dashboard.js"></script>

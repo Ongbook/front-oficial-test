@@ -15,7 +15,6 @@
 			navigationPosition: 'right',
 			scrollingSpeed: 1000
 		};
-
 	}
 
 })();

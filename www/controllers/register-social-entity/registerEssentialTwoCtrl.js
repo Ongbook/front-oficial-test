@@ -1,20 +1,20 @@
-(function () {
-  'use strict';
+// (function () {
+//   'use strict';
 
-  angular
-  .module('og.controllers')
-  .controller('registerEssentialTwoCtrl', registerEssentialTwoCtrl, '$state');
+//   angular
+//   .module('og.controllers')
+//   .controller('registerEssentialTwoCtrl', registerEssentialTwoCtrl, '$state');
 
-  registerEssentialTwoCtrl.$inject = ['$state'];
+//   registerEssentialTwoCtrl.$inject = ['$state'];
 
-  function registerEssentialTwoCtrl($state) {
-    var vm = this;
-    vm.stateGoPrevious = stateGoPrevious;
+//   function registerEssentialTwoCtrl($state) {
+//     var vm = this;
+//     vm.stateGoPrevious = stateGoPrevious;
 
-    function stateGoPrevious() {
-      $state.go('register-essential-one');
-    }
+//     function stateGoPrevious() {
+//       $state.go('register-essential-one');
+//     }
 
-  }
+//   }
 
-})();
+// })();

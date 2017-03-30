@@ -10,6 +10,8 @@
 		function dashboardCtrl() {
 			var vm = this;
 
+			console.log(':)');
+
 			
 		}
 })();
