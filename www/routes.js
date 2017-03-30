@@ -21,7 +21,7 @@
 	      url: '/cadastro',
 	      views: {	        
 	          '@':{
-          		templateUrl: '../templates/register-social-entity/index.html',
+          		templateUrl: '../templates/register-social-entity/form-essential-one/index.html',
 		          controller: 'registerSocialEntityCtrl',
 		          controllerAs: 'vm'	        
 	          }
@@ -31,7 +31,7 @@
 	      url: '/cadastro',
 	      views: {
 	        '@':{
-	          templateUrl: '../templates/register-social-entity/form-essential-two/form-essential-two.html',
+	          templateUrl: '../templates/register-social-entity/form-essential-two/index.html',
 	          controller: 'registerSocialEntityCtrl',
 	          controllerAs: 'vm'
 	        }

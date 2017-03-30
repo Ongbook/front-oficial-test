@@ -6,8 +6,8 @@
 
 	angular.module('ongbook',[
 		'ui.router',
-		'ngMessages',
 		'ngAnimate',
+		'ngMessages',
 		'toaster',
 		'ui.bootstrap',
 		'fullPage.js',

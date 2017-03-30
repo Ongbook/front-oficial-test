@@ -15,28 +15,26 @@
 				var modalInstance = $uibModal.open({
 				 	templateUrl: '../../../templates/instucional/register-modal/register-modal.html',
 				 	size:'md',
-				 	backdrop:'static',
+				 	backdrop:false,
 				 	controller: function ($uibModalInstance) {
 				 		var modal = this;
 				 		modal.cancel = cancel;
 				 		modal.sendRegister = sendRegister;
 
 				 		function cancel() {
-				 			$uibModalInstance.dismiss('cancel');
+				 			modalInstance.close();
 				 		}
 
 				 		function sendRegister(objParam) {
-				 			localStorage.setItem('user',JSON.stringify(objParam));
-				 				if(localStorage.getItem('user')){
-				 					toaster.pop({
-							                type: 'success',
-							                title: 'Sucesso',
-							                body: 'Usuário cadastrado com sucesso.',
-							                timeout: 3000
-							            });
+				 			if (objParam) {
+				 				localStorage.setItem('user',JSON.stringify(objParam));				 				
 				 				modalInstance.close();
 			 					$state.go('register-social-entity');
-				 				}
+				 			} else {
+				 				
+				 			}
+				 			
+					 				
 				 		}
 
 				 	},

@@ -7,6 +7,13 @@ form,fieldset,input,textarea,p,blockquote,th,td {
 
 
 
+.input-invalid {
+  border-color: red;
+}
+
+.input-valid {
+  border-color: green;
+}
 
 
 
