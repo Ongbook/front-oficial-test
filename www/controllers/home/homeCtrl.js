@@ -15,7 +15,7 @@
 			navigationPosition: 'right',
 			scrollingSpeed: 1000
 		};
-
+		console.log('hehehehehehhehe');
 	}
 
 })();

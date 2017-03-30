@@ -22,7 +22,6 @@
 				 		modal.sendRegister = sendRegister;
 
 				 		function cancel() {
-				 			console.log('modal on');
 				 			$uibModalInstance.dismiss('cancel');
 				 		}
 

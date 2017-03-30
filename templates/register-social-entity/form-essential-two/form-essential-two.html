@@ -1,24 +1,24 @@
-<div class="col-md-12" ng-controller="registerEssentialTwoCtrl as vm">
+<div class="col-md-12">
 
   <h2 class="register-title-content">Dados essenciais</h2>
 
   <div class="col-md-12 text-muted register-form-content">
 
-    <form  class="form">
+    <form name="form" class="form">
 
       <div class="row">
 
         <div class="col-md-4">
           <div class="form-group">
             <label for="nome-fantasia">Nome fantasia <i class="text-danger" title="Campo obrigatório">*</i></label>
-            <input type="text" class="form-control" id="nome-fantasia" required>
+            <input type="text" class="form-control" id="nome-fantasia" >
           </div>
         </div>
 
         <div class="col-md-6">
           <div class="form-group">
             <label for="razao-social">Razão Social <i class="text-danger" title="Campo obrigatório">*</i></label>
-            <input type="text" class="form-control" id="razao-social" required>
+            <input type="text" class="form-control" id="razao-social" >
           </div>
         </div>
 
@@ -36,21 +36,21 @@
         <div class="col-md-4">
           <div class="form-group">
             <label for="tel">Telefone <i class="text-danger" title="Campo obrigatório">*</i></label>
-            <input type="tel" class="form-control" id="tel" required>
+            <input type="tel" class="form-control" id="tel" >
           </div>
         </div>
 
         <div class="col-md-4">
           <div class="form-group">
             <label for="email">E-mail <i class="text-danger" title="Campo obrigatório">*</i></label>
-            <input type="email" class="form-control" id="email" required>
+            <input type="email" class="form-control" id="email" >
           </div>
         </div>
 
         <div class="col-md-4">
           <div class="form-group">
             <label for="sigla">Sigla <i class="text-danger" title="Campo obrigatório">*</i></label>
-            <input type="text" class="form-control" id="sigla" required placeholder="Url personalizada" popover-placement="bottom" uib-popover="Link para o perfil da Entidade. Exemplo: http://ongbook.org/acaci"  popover-trigger="'focus'">
+            <input type="text" class="form-control" id="sigla"  placeholder="Url personalizada" popover-placement="bottom" uib-popover="Link para o perfil da Entidade. Exemplo: http://ongbook.org/acaci"  popover-trigger="'focus'">
           </div>
         </div>
 
@@ -67,7 +67,7 @@
 
         <div class="col-md-3">
           <div class="form-group input-group">
-            <input type="number" class="form-control" id="cep" placeholder="CEP" required>
+            <input type="number" class="form-control" id="cep" placeholder="CEP" >
             <span class="input-group-btn">
               <button class="btn btn-default" type="button"><i class="fa fa-search" id="btn-cep-search"></i></button>
             </span>
@@ -76,13 +76,13 @@
 
         <div class="col-md-7">
           <div class="form-group">
-            <input type="text" class="form-control" id="logradouro" placeholder="Logradouro" required>
+            <input type="text" class="form-control" id="logradouro" placeholder="Logradouro" >
           </div>
         </div>
 
         <div class="col-md-2">
           <div class="form-group">
-            <input type="number" class="form-control" id="numero" placeholder="Nº" required>
+            <input type="number" class="form-control" id="numero" placeholder="Nº" >
           </div>
         </div>
 
@@ -171,12 +171,20 @@
       </div>
 
       <div class="col-md-12">
-        <button type="button" class="btn btn-default btn-lg pull-left btn-register-content-2" ng-click="vm.stateGoPrevious();">Anterior</button>
-        <button type="submit" class="btn btn-primary btn-lg pull-right btn-register-content-2" ng-click="">Cadastrar</button>
+        <button type="button" class="btn btn-default btn-lg pull-left btn-register-content-2" 
+          ng-click="vm.stateGoPrevious()">
+            Anterior
+        </button>
+        <button class="btn btn-primary btn-lg pull-right btn-register-content-2"
+          ng-click="vm.submit()">
+          Cadastrar
+        </button>
       </div>
 
     </form>
-
+    <pre>
+      {{form}}
+    </pre>
   </div>
 
 </div>
