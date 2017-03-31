@@ -4,28 +4,61 @@
 
   <div class="col-md-12 text-muted register-form-content">
 
-    <form name="form" class="form">
+    <form novalidate name="form" class="form">
 
       <div class="row">
-
+        <div ng-messages="form.nomeFantasia.$error" ng-if="form.nomeFantasia.$touched || vm.error">
+          <div ng-messages-include="templates/register-social-entity/form-essential-two/validate/nome-fantasia.html"></div>
+        </div>
+        <div ng-messages="form.razaoSocial.$error" ng-if="form.razaoSocial.$touched || vm.error">
+          <div ng-messages-include="templates/register-social-entity/form-essential-two/validate/razao-social.html"></div>          
+        </div>
+        <div ng-messages="form.anoFundacao.$error" ng-if="form.anoFundacao.$touched || vm.error">
+          <div ng-messages-include="templates/register-social-entity/form-essential-two/validate/ano-fundacao.html"></div>          
+        </div>
+        <div ng-messages="form.telefone.$error" ng-if="form.telefone.$touched || vm.error">
+          <div ng-messages-include="templates/register-social-entity/form-essential-two/validate/telefone.html"></div>          
+        </div>
+        <div ng-messages="form.email.$error" ng-if="form.email.$touched || vm.error">
+          <div ng-messages-include="templates/register-social-entity/form-essential-two/validate/email.html"></div>          
+        </div>
+        <div ng-messages="form.sigla.$error" ng-if="form.sigla.$touched || vm.error">
+          <div ng-messages-include="templates/register-social-entity/form-essential-two/validate/sigla.html"></div>          
+        </div>
+        <div ng-messages="form.cep.$error" ng-if="form.cep.$touched || vm.error">
+          <div ng-messages-include="templates/register-social-entity/form-essential-two/validate/cep.html"></div>          
+        </div>
+        <div ng-messages="form.complemento.$error" ng-if="form.complemento.$touched || vm.error">
+          <div ng-messages-include="templates/register-social-entity/form-essential-two/validate/complemento.html"></div>
+        </div>
+        <div ng-messages="form.numeroEnd.$error" ng-if="form.numeroEnd.$touched || vm.error">
+          <div ng-messages-include="templates/register-social-entity/form-essential-two/validate/numero-end.html"></div>
+        </div>
+       
         <div class="col-md-4">
           <div class="form-group">
             <label for="nome-fantasia">Nome fantasia <i class="text-danger" title="Campo obrigatório">*</i></label>
-            <input type="text" class="form-control" id="nome-fantasia" >
+            <input type="text" class="form-control" id="nome-fantasia" name="nomeFantasia"
+              ng-model="cad.nomeFantasia" 
+              required>
           </div>
         </div>
 
         <div class="col-md-6">
           <div class="form-group">
             <label for="razao-social">Razão Social <i class="text-danger" title="Campo obrigatório">*</i></label>
-            <input type="text" class="form-control" id="razao-social" >
+            <input type="text" class="form-control" id="razao-social"  name="razaoSocial"
+             ng-model="cad.razaoSocial" 
+             required>
           </div>
         </div>
 
         <div class="col-md-2">
           <div class="form-group">
             <label for="ano-fundacao">Ano de fundação</label>
-            <input type="number" class="form-control" id="ano-fundacao">
+            <input type="number" class="form-control" id="ano-fundacao" name="anoFundacao"
+             ng-model="cad.anoFundacao" 
+             required>
           </div>
         </div>
 
@@ -36,21 +69,28 @@
         <div class="col-md-4">
           <div class="form-group">
             <label for="tel">Telefone <i class="text-danger" title="Campo obrigatório">*</i></label>
-            <input type="tel" class="form-control" id="tel" >
+            <input type="tel" class="form-control" id="tel" name="telefone"
+              ng-model="cad.telefone"
+              required>
           </div>
         </div>
 
         <div class="col-md-4">
           <div class="form-group">
             <label for="email">E-mail <i class="text-danger" title="Campo obrigatório">*</i></label>
-            <input type="email" class="form-control" id="email" >
+            <input type="email" class="form-control" id="email" name="email"
+              ng-pattern='/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/'
+              ng-model="cad.email" 
+              required>
           </div>
         </div>
 
         <div class="col-md-4">
           <div class="form-group">
             <label for="sigla">Sigla <i class="text-danger" title="Campo obrigatório">*</i></label>
-            <input type="text" class="form-control" id="sigla"  placeholder="Url personalizada" popover-placement="bottom" uib-popover="Link para o perfil da Entidade. Exemplo: http://ongbook.org/acaci"  popover-trigger="'focus'">
+            <input type="text" class="form-control" id="sigla"  placeholder="Url personalizada" popover-placement="bottom" uib-popover="Link para o perfil da Entidade. Exemplo: http://ongbook.org/acaci"  popover-trigger="'focus'" name="sigla"
+              ng-model="cad.sigla" 
+              required>
           </div>
         </div>
 
@@ -67,22 +107,29 @@
 
         <div class="col-md-3">
           <div class="form-group input-group">
-            <input type="number" class="form-control" id="cep" placeholder="CEP" >
+            <input  type="number" class="form-control" id="cep" placeholder="CEP"  name="cep"
+              ng-model="cad.cep" 
+              required>
             <span class="input-group-btn">
-              <button class="btn btn-default" type="button"><i class="fa fa-search" id="btn-cep-search"></i></button>
+              <button class="btn btn-default" type="button"><i class="fa fa-search" id="btn-cep-search"
+                ></i></button>
             </span>
           </div>
         </div>
 
         <div class="col-md-7">
           <div class="form-group">
-            <input type="text" class="form-control" id="logradouro" placeholder="Logradouro" >
+            <input type="text" class="form-control" id="logradouro" placeholder="Logradouro" name="logradouro"
+              ng-model="cad.logradouro" 
+              required>
           </div>
         </div>
 
         <div class="col-md-2">
           <div class="form-group">
-            <input type="number" class="form-control" id="numero" placeholder="Nº" >
+            <input type="number" class="form-control" id="numero" placeholder="Nº" name="numeroEnd"
+              ng-model="cad.numeroEnd" 
+              required>
           </div>
         </div>
 
@@ -95,56 +142,34 @@
           <div class="row">
             <div class="col-md-12">
               <div class="form-group">
-                <input type="text" class="form-control" id="complemento" placeholder="Complemento">
+                <input type="text" class="form-control" id="complemento" placeholder="Complemento" name="complemento"
+                 ng-model="cad.complemento" 
+                 required>
               </div>
             </div>
           </div>
           <div class="row">
             <div class="col-md-12">
               <div class="form-group">
-                <input type="text" class="form-control" id="bairro" placeholder="Bairro">
+                <input type="text" class="form-control" id="bairro" placeholder="Bairro" name="bairro"
+                  ng-model="cad.bairro" >
               </div>
             </div>
           </div>
           <div class="row">
             <div class="col-md-12">
               <div class="form-group">
-                <input type="text" class="form-control" id="cidade" placeholder="Cidade">
+                <input type="text" class="form-control" id="cidade" placeholder="Cidade" name="cidade"
+                ng-model="cad.cidade">
               </div>
             </div>
           </div>
           <div class="row">
             <div class="col-md-12">
               <div class="form-group">
-                <select class="form-control" id="uf">
-                  <option value="" disabled selected>UF</option>
-                  <option value="AC">Acre</option>
-                  <option value="AL">Alagoas</option>
-                  <option value="AP">Amapá</option>
-                  <option value="AM">Amazonas</option>
-                  <option value="BA">Bahia</option>
-                  <option value="CE">Ceará</option>
-                  <option value="DF">Distrito Federal</option>
-                  <option value="ES">Espirito Santo</option>
-                  <option value="GO">Goiás</option>
-                  <option value="MA">Maranhão</option>
-                  <option value="MS">Mato Grosso do Sul</option>
-                  <option value="MT">Mato Grosso</option>
-                  <option value="MG">Minas Gerais</option>
-                  <option value="PA">Pará</option>
-                  <option value="PB">Paraíba</option>
-                  <option value="PR">Paraná</option>
-                  <option value="PE">Pernambuco</option>
-                  <option value="PI">Piauí</option>
-                  <option value="RJ">Rio de Janeiro</option>
-                  <option value="RN">Rio Grande do Norte</option>
-                  <option value="RS">Rio Grande do Sul</option>
-                  <option value="RO">Rondônia</option>
-                  <option value="RR">Roraima</option>
-                  <option value="SC">Santa Catarina</option>
-                  <option value="SP">São Paulo</option>
-                  <option value="SE">Sergipe</option>
-                  <option value="TO">Tocantins</option>
+                <select class="form-control" id="uf" name="uf"
+                  ng-model="cad.uf">
+                  <option value="" disabled selected>UF</option>                  
                 </select>
               </div>
             </div>
@@ -152,7 +177,7 @@
           <div class="row">
             <div class="col-md-12">
               <div class="form-group">
-                <input type="text" class="form-control" id="pais" placeholder="País">
+                <input ng-model="cad.pais" type="text" class="form-control" id="pais" placeholder="País" name="pais">
               </div>
             </div>
           </div>
@@ -176,15 +201,12 @@
             Anterior
         </button>
         <button class="btn btn-primary btn-lg pull-right btn-register-content-2"
-          ng-click="vm.submit()">
+          ng-click="form.$valid ? vm.submit(cad) : vm.showError(true)">
           Cadastrar
         </button>
       </div>
 
-    </form>
-    <pre>
-      {{form}}
-    </pre>
+    </form>   
   </div>
 
 </div>
