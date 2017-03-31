@@ -6,11 +6,7 @@
         <section class="section" id="section0">
             <div id="map-container">
 
-                <google-map></google-map>
-
-                <div id="map-tip" onclick="$(this).hide()">
-                    <!-- <img src="../assets/img/" alt="tip" /> -->
-                </div>
+                <ng-map center="[40.74, -74.18]"></ng-map>
 
                 <div class="over-map" id="over-map">
                     <div class="container">
@@ -22,7 +18,7 @@
                             Um local para Solidários conhecerem as necessidades de Entidades que trabalham para resolver problemas sociais.
                         </h2>
 
-                        <button onclick="mapGetStarted()" class="btn btn-default">
+                        <button id="btn-know-now" class="btn btn-default">
                             Conheça Agora
                         </button>
                     </div>
@@ -31,10 +27,10 @@
         </section>
 
         <section class="section" id="section1">
-            <!-- <video id="video-background" loop muted controls="false" data-autoplay>
+            <video id="video-background" loop muted controls="false" data-autoplay>
                 <source src="http://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
                 <source src="http://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg">
-            </video> -->
+            </video>
             <div id="layer-over-video">
                 <div class="container">
                     <h1>Queremos e fazemos</h1>
@@ -46,15 +42,15 @@
                                 <div class="panel-body panel-queremos">
                                     <h3>Para as Entidades Sociais</h3>
                                     <ul>
-                                        <li>Dar visibilidade aos seus projetos sociais</li>
-                                        <li>Manter a população informada de suas atividade diárias</li>
-                                        <li>Gerir suas necessidades: (postar, manter e dar feedback dos resultados)
+                                        <li>Gerir suas <strong>necessidades</strong>: (postar, manter e dar feedback dos resultados)
                                             <ul>
-                                                <li>Necessidade de trabalho voluntário.</li>
-                                                <li>Necessidade de um determinado material;</li>
-                                                <li>Necessidade de dinheiro para comprar o material;</li>
+                                                <li>De trabalho voluntário;</li>
+                                                <li>De um determinado material;</li>
+                                                <li>Ou de recursos <strong>$</strong>, para comprar o material.</li>
                                             </ul>
                                         </li>
+                                        <li>Dar visibilidade aos seus projetos</li>
+                                        <li>Manter a população informada de suas atividade diárias</li>
                                     </ul>
                                 </div>
                             </div>
@@ -63,7 +59,7 @@
                         <div class="col-md-6">
                             <div class="panel panel-default panel-bg-video">
                                 <div class="panel-body panel-queremos">
-                                    <h3>Para os usuários com perfil Solidário</h3>
+                                    <h3>Para as pessoas com o perfil Solidário</h3>
                                     <ul>
                                         <li>Informações categorizadas de atividades sociais</li>
                                         <li>Oportunidade de exercer atividades filantrópicas, exercer a cidadania</li>
@@ -127,7 +123,7 @@
             <div class="container">
                 <h1>Atua em alguma instituição social?</h1>
                 <div class="col-md-6">
-                    <div class="panel panel-dafault" style="min-height: 288px;">
+                    <div class="panel panel-dafault" style="min-height: 278px;">
                         <div class="pane-body">
                             <h2>Slides...</h2>
                         </div>
@@ -135,9 +131,9 @@
                 </div>
                 <div class="col-md-6">
                     <div class="jumbotron">
-                        <h5>Você é responsável por uma Entidade Social?</h5>
+                        <h5>Você é responsável por ela?</h5>
                         <a class="btn btn-success btn-lg btn-block" id="btn-cadastre" href="javascript:void(0)" (click)="showRegister()">Cadastre-se</a>
-                        <h5>Ou, conhece alguem que seja coordenador e ou responável?</h5>
+                        <h5>Ou conhece alguém que seja coordenador e ou responável?</h5>
                         <a class="btn btn-primary btn-lg btn-block" href="javascript:void(0)" (click)="showModalDivulgue()">Envie ao amigo</a>
                     </div>
                 </div>
@@ -158,7 +154,7 @@
                     <div class="col-sm-4">
                         <div class="panel panel-default panel-parceiros">
                             <div class="panel-body">
-                                <img class="logo-parceiros"  src="../assets/img/parceiros/1.png" >
+                                <img class="logo-parceiros" src="../assets/img/parceiros/1.png">
                             </div>
                         </div>
                     </div>
@@ -185,7 +181,7 @@
             </div>
         </section>
 
-        <section class="section fp-auto-height" id="section4">
+        <section class="section fp-auto-height" id="section5">
             <div class="footer-top">
                 <div class="container">
                     <div class="row">
@@ -210,7 +206,7 @@
                         </div>
                         <div class="col-md-4">
                             <iframe class="fmap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1876.6724677885798!2d-40.657600862032346!3d-19.825352797283937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb7764cb2fb7681%3A0x3a971f1a25c069a0!2sSanto+Ant%C3%B4nio+do+Cana%C3%A3%2C+Santa+Teresa+-+ES!5e0!3m2!1spt-BR!2sbr!4v1480697591033"
-                            frameborder="0" style="border:0" allowfullscreen>
+                                frameborder="0" style="border:0" allowfullscreen>
                             </iframe>
                         </div>
                         <div class="col-md-4">
@@ -233,6 +229,10 @@
     <!-- End: #fullPage -->
 </div>
 <!-- End: homeCtrl -->
+
+
+
+
 
 <!-- Modais -->
 <!-- Divulgue
