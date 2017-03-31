@@ -7,10 +7,8 @@
 
       <div class="col-md-12">
   			<h2 class="register-title-content">Dados essenciais</h2>
-  			<div 
-  				ng-messages="form.cnpj.$error" 
-  				ng-if="form.cnpj.$touched || vm.error">
-           <div ng-messages-include="templates/register-social-entity/form-essential-one/validate/cnpj.html"></div>
+		<div ng-messages="form.cnpj.$error" ng-if="form.cnpj.$touched || vm.error">
+           	<div ng-messages-include="templates/register-social-entity/form-essential-one/validate/cnpj.html"></div>
         </div>
         <div ng-messages="form.occupation.$error" ng-if="form.occupation.$touched || vm.error">
             <div ng-messages-include="templates/register-social-entity/form-essential-one/validate/occupation.html"></div>
