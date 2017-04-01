@@ -4,6 +4,8 @@
 	angular
 		.module('ongbook')
 		.value('config',{
-			apiUrl:""
+			//TODO: Mover para o config do Angular
+			apiUrl:"https://onbook-api-strapi-gustavorps.c9users.io/"
+
 		});
 })();

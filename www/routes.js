@@ -17,22 +17,32 @@
 	        }
 	      }
 	    })	   
-	    .state('register-social-entity', {
-	      url: '/cadastro',
-	      views: {	        
-	          '@':{
-          		templateUrl: '../templates/register-social-entity/form-essential-one/index.html',
-		          controller: 'registerSocialEntityCtrl',
-		          controllerAs: 'vm'	        
-	          }
-	      }
-	    })
-	    .state('register-social-entity-two', {
-	      url: '/cadastro',
-	      views: {
+	    // .state('register-social-entity', {
+	    //   url: '/cadastro',
+	    //   views: {	        
+	    //       '@':{
+     //      		templateUrl: '../templates/register-social-entity/form-essential-one/index.html',
+		   //        controller: 'registerSocialEntityCtrl',
+		   //        controllerAs: 'vm'	        
+	    //       }
+	    //   }
+	    // })
+	    // .state('register-social-entity-two', {
+	    //   url: '/cadastro',
+	    //   views: {
+	    //     '@':{
+	    //       templateUrl: '../templates/register-social-entity/form-essential-two/index.html',
+	    //       controller: 'registerSocialEntityCtrl',
+	    //       controllerAs: 'vm'
+	    //     }
+	    //   }
+	    // })
+	    .state('login', {
+	      url: '/login',
+	      views:{
 	        '@':{
-	          templateUrl: '../templates/register-social-entity/form-essential-two/index.html',
-	          controller: 'registerSocialEntityCtrl',
+	          templateUrl: '../templates/login/login.html',
+	          controller: 'loginCtrl',
 	          controllerAs: 'vm'
 	        }
 	      }
@@ -42,10 +52,16 @@
 	      views:{
 	        '@':{
 	          templateUrl: '../templates/dashboard/index.html',
-	          controller: 'registerSocialEntityCtrl',
+	          controller: 'dashboardCtrl',
 	          controllerAs: 'vm'
 	        }
 	      }
+	    })
+	    .state('new-entitie', {
+	      url: '/dashboard/entidade',	      
+          templateUrl: '../templates/dashboard/dashboard/entities/entitie.html',
+          controller: 'entitiesCtrl',
+          controllerAs: 'vm'	       
 	    })
 	    ;
 	    $urlRouterProvider.otherwise('/');
