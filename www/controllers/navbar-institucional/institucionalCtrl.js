@@ -5,9 +5,9 @@
 		.module('og.controllers')
 		.controller('institucionalCtrl', institucionalCtrl);
 
-		institucionalCtrl.$inject = ['$uibModal','$scope','toaster', '$state'];
+		institucionalCtrl.$inject = ['$uibModal','$scope','toaster', '$state','entitiesServiceApi'];
 
-		function institucionalCtrl($uibModal,$scope, toaster, $state) {
+		function institucionalCtrl($uibModal,$scope, toaster, $state,entitiesServiceApi) {
 			var vm = this;
 			vm.register = register;
 
@@ -27,11 +27,19 @@
 
 				 		function sendRegister(objParam) {
 				 			if (objParam) {
-				 				localStorage.setItem('user',JSON.stringify(objParam));				 				
-				 				modalInstance.close();
-			 					$state.go('register-social-entity');
-				 			} else {
-				 				
+				 				entitiesServiceApi.registerUser()
+				 					.then(function (response) {
+				 						if(response){
+				 							localStorage.setItem('token',JSON.stringify(response.token));				 				
+							 				modalInstance.close();
+							 				toaster.pop('success','Sucesso','Cadastro efetuado com sucesso',3000)
+						 					setTimeout(function(){
+						 						$state.go('login');						 					
+						 					},2000);
+				 						} else {
+				 							toaster.pop('error','Dados incorretos','Revise as informações digitadas.',3000);
+				 						}
+				 					});				 				
 				 			}
 				 			
 					 				

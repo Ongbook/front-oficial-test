@@ -15,12 +15,26 @@
         <div ng-messages="form.password.$error" ng-if="form.password.$touched || vm.error">
             <div ng-messages-include="templates/instucional/register-modal/validate/passowrd.html"></div>
         </div>
+        <div ng-messages="form.user.$error" ng-if="form.user.$touched || vm.error">
+            <div ng-messages-include="templates/instucional/register-modal/validate/user.html"></div>
+        </div>
         
         <div class="form-group">
             <label for="name" class="control-label">Nome</label>
             <input type="text" class="form-control" name="name" id="name"
                 ng-class="{'input-invalid': form.name.$touched && form.name.$invalid}"
                 ng-model="cad.name"
+                ng-minlength="6"
+                ng-maxlength="100"
+                placeholder="" 
+                required
+                plac>
+        </div>
+        <div class="form-group">
+            <label for="user" class="control-label">Usuário</label>
+            <input type="text" class="form-control" name="user" id="user"
+                ng-class="{'input-invalid': form.user.$touched && form.user.$invalid}"
+                ng-model="cad.user"
                 ng-minlength="6"
                 ng-maxlength="100"
                 placeholder="" 

@@ -21,7 +21,7 @@
       function nextStep(objParam) {
         if (objParam) {
           localStorage.setItem('entitie',JSON.stringify(objParam));
-          $state.go('register-social-entity-two');
+          $state.go('login');
         } 
       }
 

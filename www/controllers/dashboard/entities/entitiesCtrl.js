@@ -5,11 +5,17 @@
 		.module('og.controllers')
 		.controller('entitiesCtrl', entitiesCtrl);
 
-		entitiesCtrl.$inject = [];
+		entitiesCtrl.$inject = ['entitiesServiceApi'];
 
-		function entitiesCtrl() {
+		function entitiesCtrl(entitiesServiceApi) {
 			var vm = this;
 
-			
+			if (entitiesServiceApi.isLogged()){
+				
+			}
+			else {
+				$state.go('home');
+				toaster.pop('error','Usuário não logado','Faça o login antes de entrar',3000);
+			}
 		}
 })();

@@ -37,28 +37,20 @@
                             <li>
                                 <div class="row">
                                     <div class="col-md-12">
-                                        Entrar utilizando
+                                        <h4 class="text-center">Entrar utilizando</h4>
                                         <div class="social-buttons">
                                             <a (click)="fbLogin()" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
                                             <a (click)="printUserInfo()" class="btn btn-tw"><i class="fa fa-twitter"></i> Twitter</a>
                                         </div>
-                                        ou
-                                        <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
-                                            <div class="form-group">
-                                                <label class="sr-only" for="email">Email</label>
-                                                <input type="email" class="form-control" id="email" placeholder="Email" required>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="sr-only" for="password">Senha</label>
-                                                <input type="password" class="form-control" id="password" placeholder="Senha" required>
-                                                <div class="help-block text-right">
-                                                    <a (click)="logout()">Esqueceu sua senha ?</a>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <button type="submit" class="btn btn-primary btn-block">Entrar</button>
-                                            </div>
-                                        </form>
+                                        <span class="text-center">OU</span>
+                                        <div class="form-group">
+                                            <a href="login">
+                                              <button type="submit" class="btn btn-primary btn-block"
+                                              ng-click=""> 
+                                                Entrar
+                                              </button>
+                                            </a>
+                                        </div>
                                     </div>
                                     <div class="bottom text-center">
                                         Não tem uma conta? <a ng-click="vm.register()"><b id="lk-signup">Crie uma!</b></a>
