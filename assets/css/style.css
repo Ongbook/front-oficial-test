@@ -6,7 +6,6 @@ form,fieldset,input,textarea,p,blockquote,th,td {
 }
 
 
-
 .input-invalid {
   border-color: red;
 }
@@ -14,8 +13,6 @@ form,fieldset,input,textarea,p,blockquote,th,td {
 .input-valid {
   border-color: green;
 }
-
-
 
 #register-social-entity{
   background: linear-gradient(180deg, #105596 30%, white 80%, #000 100%);
@@ -26,8 +23,6 @@ form,fieldset,input,textarea,p,blockquote,th,td {
   right: 0;
   left: 0;
   bottom: 0;
-
-
 }
 
 .rounded{
@@ -99,70 +94,70 @@ form,fieldset,input,textarea,p,blockquote,th,td {
 }
 
 /* nav-bar-home-institutional *************************************/
-.navbar-default {
+#institutional-navbar {
   background-color: #43607d;
   border-color: #2d4052;
 }
-.navbar-default .navbar-brand {
+#institutional-navbar .navbar-brand {
   color: #f7fbff;
 }
-.navbar-default .navbar-brand:hover,
-.navbar-default .navbar-brand:focus {
+#institutional-navbar .navbar-brand:hover,
+#institutional-navbar .navbar-brand:focus {
   color: #9cb0c4;
 }
-.navbar-default .navbar-text {
+#institutional-navbar .navbar-text {
   color: #f7fbff;
 }
-.navbar-default .navbar-nav > li > a {
+#institutional-navbar .navbar-nav > li > a {
   color: #f7fbff;
 }
-.navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li > a:focus {
+#institutional-navbar .navbar-nav > li > a:hover,
+#institutional-navbar .navbar-nav > li > a:focus {
   color: #9cb0c4;
 }
-.navbar-default .navbar-nav > .active > a,
-.navbar-default .navbar-nav > .active > a:hover,
-.navbar-default .navbar-nav > .active > a:focus {
+#institutional-navbar .navbar-nav > .active > a,
+#institutional-navbar .navbar-nav > .active > a:hover,
+#institutional-navbar .navbar-nav > .active > a:focus {
   color: #9cb0c4;
   background-color: #2d4052;
 }
-.navbar-default .navbar-nav > .open > a,
-.navbar-default .navbar-nav > .open > a:hover,
-.navbar-default .navbar-nav > .open > a:focus {
+#institutional-navbar .navbar-nav > .open > a,
+#institutional-navbar .navbar-nav > .open > a:hover,
+#institutional-navbar .navbar-nav > .open > a:focus {
   color: #9cb0c4;
   background-color: #2d4052;
 }
-.navbar-default .navbar-toggle {
+#institutional-navbar .navbar-toggle {
   border-color: #2d4052;
 }
-.navbar-default .navbar-toggle:hover,
-.navbar-default .navbar-toggle:focus {
+#institutional-navbar .navbar-toggle:hover,
+#institutional-navbar .navbar-toggle:focus {
   background-color: #2d4052;
 }
-.navbar-default .navbar-toggle .icon-bar {
+#institutional-navbar .navbar-toggle .icon-bar {
   background-color: #f7fbff;
 }
-.navbar-default .navbar-collapse,
-.navbar-default .navbar-form {
+#institutional-navbar .navbar-collapse,
+#institutional-navbar .navbar-form {
   border-color: #f7fbff;
 }
-.navbar-default .navbar-link {
+#institutional-navbar .navbar-link {
   color: #f7fbff;
 }
-.navbar-default .navbar-link:hover {
+#institutional-navbar .navbar-link:hover {
   color: #9cb0c4;
 }
 @media (max-width: 767px) {
-  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+  #institutional-navbar .navbar-nav .open .dropdown-menu > li > a {
     color: #f7fbff;
   }
-  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
-  .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+  #institutional-navbar .navbar-nav .open .dropdown-menu > li > a:hover,
+  #institutional-navbar .navbar-nav .open .dropdown-menu > li > a:focus {
     color: #9cb0c4;
   }
-  .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
-  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
-  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+  #institutional-navbar .navbar-nav .open .dropdown-menu > .active > a,
+  #institutional-navbar .navbar-nav .open .dropdown-menu > .active > a:hover,
+  #institutional-navbar .navbar-nav .open .dropdown-menu > .active > a:focus {
     color: #9cb0c4;
     background-color: #2d4052;
   }
@@ -390,47 +385,47 @@ form,fieldset,input,textarea,p,blockquote,th,td {
 /* End #section1 - what **********************************************/
 
 
-/* #section2 - support ***********************************************/
+/* End #section2 - signup-owner-entity ******************************/
+#section2 {
+  background-color: lightgreen;
+}
 #section2 h1 {
+  margin-bottom: 50px;
+  text-align: center;
+}
+#section2 h5 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+#section2 #btn-cadastre {
+  margin-bottom: 40px;
+}
+/* End #section2 - signup-owner-entity *****************************/
+
+
+/* #section3 - support ***********************************************/
+#section3 h1 {
   margin-bottom: 2%;
   text-align: center;
 }
 
-#section2 h3 {
+#section3 h3 {
   margin-bottom: 7%;
   text-align: center;
 }
 
-#section2 p {
+#section3 p {
   text-align: center;
   margin-bottom: 5px;
 }
 
-#section2 .icons-apoie {
+#section3 .icons-apoie {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 60%;
 }
-/* End #section2 - support ******************************************/
-
-
-/* End #section3 - signup-owner-entity ******************************/
-#section3 {
-  background-color: lightgreen;
-}
-#section3 h1 {
-  margin-bottom: 50px;
-  text-align: center;
-}
-#section3 h5 {
-  text-align: center;
-  margin-bottom: 10px;
-}
-#section3 #btn-cadastre {
-  margin-bottom: 40px;
-}
-/* End #section3 - signup-owner-entity *****************************/
+/* End #section3 - support ******************************************/
 
 
 /* End #section4 - partners ****************************************/
@@ -607,144 +602,135 @@ app-header{
   height: 230px;
 }
 
-
 */
 
 
 body, html {
-    height: 100%;
-    background-repeat: no-repeat;
-    background-image: linear-gradient(rgb(104, 145, 162), rgb(12, 97, 33));
+  height: 100%;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(rgb(104, 145, 162), rgb(12, 97, 33));
 }
 
 .card-container.card {
-    max-width: 350px;
-    padding: 40px 40px;
+  max-width: 350px;
+  padding: 40px 40px;
 }
 
-.btn {
-    font-weight: 700;
-    height: 36px;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    user-select: none;
-    cursor: default;
-}
 
 /*
  * Card component
  */
 .card {
-    background-color: #F7F7F7;
-    /* just in case there no content*/
-    padding: 20px 25px 30px;
-    margin: 0 auto 25px;
-    margin-top: 50px;
-    /* shadows and rounded borders */
-    -moz-border-radius: 2px;
-    -webkit-border-radius: 2px;
-    border-radius: 2px;
-    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  background-color: #F7F7F7;
+  /* just in case there no content*/
+  padding: 20px 25px 30px;
+  margin: 0 auto 25px;
+  margin-top: 50px;
+  /* shadows and rounded borders */
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
 }
 
 .profile-img-card {
-    width: 96px;
-    height: 96px;
-    margin: 0 auto 10px;
-    display: block;
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 10px;
+  display: block;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
 }
 
 /*
  * Form styles
  */
 .profile-name-card {
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center;
-    margin: 10px 0 0;
-    min-height: 1em;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  margin: 10px 0 0;
+  min-height: 1em;
 }
 
 .reauth-email {
-    display: block;
-    color: #404040;
-    line-height: 2;
-    margin-bottom: 10px;
-    font-size: 14px;
-    text-align: center;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+  display: block;
+  color: #404040;
+  line-height: 2;
+  margin-bottom: 10px;
+  font-size: 14px;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .form-signin #inputEmail,
 .form-signin #inputPassword {
-    direction: ltr;
-    height: 44px;
-    font-size: 16px;
+  direction: ltr;
+  height: 44px;
+  font-size: 16px;
 }
 
 .form-signin input[type=email],
 .form-signin input[type=password],
 .form-signin input[type=text],
 .form-signin button {
-    width: 100%;
-    display: block;
-    margin-bottom: 10px;
-    z-index: 1;
-    position: relative;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+  z-index: 1;
+  position: relative;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .form-signin .form-control:focus {
-    border-color: rgb(104, 145, 162);
-    outline: 0;
-    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(104, 145, 162);
-    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(104, 145, 162);
+  border-color: rgb(104, 145, 162);
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(104, 145, 162);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(104, 145, 162);
 }
 
-.btn.btn-signin {
-    /*background-color: #4d90fe; */
-    background-color: rgb(104, 145, 162);
-    /* background-color: linear-gradient(rgb(104, 145, 162), rgb(12, 97, 33));*/
-    padding: 0px;
-    font-weight: 700;
-    font-size: 14px;
-    height: 36px;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
-    border-radius: 3px;
-    border: none;
-    -o-transition: all 0.218s;
-    -moz-transition: all 0.218s;
-    -webkit-transition: all 0.218s;
-    transition: all 0.218s;
+.btn-signin {
+  /*background-color: #4d90fe; */
+  background-color: rgb(104, 145, 162);
+  /* background-color: linear-gradient(rgb(104, 145, 162), rgb(12, 97, 33));*/
+  padding: 0px;
+  font-weight: 700;
+  font-size: 14px;
+  height: 36px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  border: none;
+  -o-transition: all 0.218s;
+  -moz-transition: all 0.218s;
+  -webkit-transition: all 0.218s;
+  transition: all 0.218s;
 }
 
-.btn.btn-signin:hover,
-.btn.btn-signin:active,
-.btn.btn-signin:focus {
-    background-color: rgb(12, 97, 33);
+.btn-signin:hover,
+.btn-signin:active,
+.btn-signin:focus {
+  background-color: rgb(12, 97, 33);
 }
 
 .forgot-password {
-    color: rgb(104, 145, 162);
+  color: rgb(104, 145, 162);
 }
 
 .forgot-password:hover,
 .forgot-password:active,
 .forgot-password:focus{
-    color: rgb(12, 97, 33);
+  color: rgb(12, 97, 33);
 }
 
 #logo-dashboard {
