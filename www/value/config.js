@@ -5,7 +5,7 @@
 		.module('ongbook')
 		.value('config',{
 			//TODO: Mover para o config do Angular
-			apiUrl:"https://onbook-api-strapi-gustavorps.c9users.io/"
+			apiUrl:"https://ongbook-api-strapi-dev.herokuapp.com/"
 
 		});
 })();
