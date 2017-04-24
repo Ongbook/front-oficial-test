@@ -6,6 +6,6 @@
       function () {
         return{
           templateUrl: 'templates/dashboard/navbar-dashboard/navbar-dashboard.html'
-        }
+        };
       });
 })();

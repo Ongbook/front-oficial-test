@@ -3,17 +3,17 @@
 
 	angular
 		.module('og.controllers')
-		.controller('institucionalCtrl', institucionalCtrl);
+		.controller('navbarInstitucionalCtrl', navbarInstitucionalCtrl);
 
-		institucionalCtrl.$inject = ['$uibModal','$scope','toaster', '$state','entitiesServiceApi'];
+		navbarInstitucionalCtrl.$inject = ['$uibModal','$scope','toaster', '$state','entitiesServiceApi'];
 
-		function institucionalCtrl($uibModal,$scope, toaster, $state,entitiesServiceApi) {
+		function navbarInstitucionalCtrl($uibModal,$scope, toaster, $state,entitiesServiceApi) {
 			var vm = this;
 			vm.register = register;
 
 			function register() {
 				var modalInstance = $uibModal.open({
-				 	templateUrl: '../../../templates/instucional/register-modal/register-modal.html',
+				 	templateUrl: '../../../templates/navbar-institucional/register-modal/register-modal.html',
 				 	size:'md',
 				 	backdrop:false,
 				 	controller: function ($uibModalInstance) {
@@ -39,12 +39,9 @@
 				 						} else {
 				 							toaster.pop('error','Dados incorretos','Revise as informações digitadas.',3000);
 				 						}
-				 					});				 				
-				 			}
-				 			
-					 				
+				 					}); 
+				 			}		
 				 		}
-
 				 	},
 				 	scope:$scope,
 				 	controllerAs: 'modal'
