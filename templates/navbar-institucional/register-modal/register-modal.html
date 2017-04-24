@@ -15,9 +15,9 @@
         <div ng-messages="form.password.$error" ng-if="form.password.$touched || vm.error">
             <div ng-messages-include="templates/instucional/register-modal/validate/passowrd.html"></div>
         </div>
-        <div ng-messages="form.user.$error" ng-if="form.user.$touched || vm.error">
+        <!-- <div ng-messages="form.user.$error" ng-if="form.user.$touched || vm.error">
             <div ng-messages-include="templates/instucional/register-modal/validate/user.html"></div>
-        </div>
+        </div> -->
         
         <div class="form-group">
             <label for="name" class="control-label">Nome</label>
@@ -30,7 +30,7 @@
                 required
                 plac>
         </div>
-        <div class="form-group">
+        <!-- <div class="form-group">
             <label for="user" class="control-label">Usuário</label>
             <input type="text" class="form-control" name="user" id="user"
                 ng-class="{'input-invalid': form.user.$touched && form.user.$invalid}"
@@ -40,7 +40,7 @@
                 placeholder="" 
                 required
                 plac>
-        </div>
+        </div> -->
         <div class="form-group">
             <label for="email" class="control-label">Email</label>
             <input type="email" class="form-control" name="email" id="email"

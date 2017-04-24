@@ -1,4 +1,4 @@
-<header ng-controller="institucionalCtrl as vm">
+<header ng-controller="navbarInstitucionalCtrl as vm">
     <nav id="institutional-navbar" class="navbar navbar-default navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -23,17 +23,11 @@
                     <li data-menuanchor="apoie"><a href="#apoie">Apoie</a></li>
                     <li class="dropdown">
                         <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">
-                            <div> <!-- *ngIf="!authState" -->
+                            <div> 
                                 <b>Entrar</b> <span class="caret"></span>
-                            </div>
-                            <!-- <div>*ngIf="authState"
-                                <span>Olá </span>
-                                <strong>{{ authState.auth.displayName}}</strong>
-                                <span class="caret"></span>
-                            </div> -->
+                            </div>                            
                         </a>
-
-                        <ul id="login-dp" class="dropdown-menu"><!-- *ngIf="!authState" -->
+                        <ul id="login-dp" class="dropdown-menu">
                             <li>
                                 <div class="row">
                                     <div class="col-md-12">
@@ -58,35 +52,9 @@
                                 </div>
                             </li>
                         </ul>
-                        <!-- <ul class="dropdown-menu"> *ngIf="authState"
-                            <li>
-                                <div class="navbar-login">
-                                    <div class="row">
-                                        <div class="col-lg-4">
-                                            <p class="text-center">
-                                                <img src="{{ authState.auth.photoURL}}" alt="img"/>
-                                            </p>
-                                        </div>
-                                        <div class="col-lg-8">
-                                            <p class="text-left"><strong>{{ authState.auth.displayName}}</strong></p>
-                                            <p class="text-left small">{{ authState.auth.email}}</p>
-                                            <p class="text-left">
-                                                <a href="#" class="btn btn-primary btn-block btn-sm">Minha Conta</a>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="divider navbar-login-session-bg"></li>
-                            <li><a href="#">Painel <span class="fa fa-dashboard pull-right"></span></a></li>
-                            <li class="divider"></li>
-                            <li><a href="#">Entidades <span class="fa fa-home pull-right"></span></a></li>
-                            <li class="divider"></li>
-                            <li><a (click)="logout()">Sair <span class="fa fa-sign-out pull-right"></span></a></li>
-                        </ul> -->
                     </li>
                 </ul>
-            </div><!--/.nav-collapse -->
+            </div>
         </div>
     </nav>
 </header>
