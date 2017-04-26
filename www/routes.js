@@ -3,9 +3,14 @@
 
 	angular
 		.module('ongbook')
-		.config(['$locationProvider','$urlRouterProvider','$stateProvider',
-		function($locationProvider,$urlRouterProvider,$stateProvider){
+		.config(['$locationProvider','$urlRouterProvider','$stateProvider', '$authProvider',
+		function($locationProvider,$urlRouterProvider,$stateProvider, $authProvider){
 		$locationProvider.html5Mode(true);
+
+		$authProvider.github({
+      clientId: '1597166d73b1db413ff2'
+    });
+
 		$stateProvider
 	    .state('home', {
 	      url: '/',

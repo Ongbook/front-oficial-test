@@ -1,27 +1,22 @@
 (function () {
     'use strict';
     angular
-        .module('og.interceptors')
+        .module('ongbook')
         .factory('errorInterceptor', errorInterceptor);
 
-    errorInterceptor.$inject = ['toaster'];
+    errorInterceptor.$inject = ['$q','$location','toaster'];
 
-    function errorInterceptor(toaster) {
-        return {
-            request: function (config) {
-                return config;
-            },
-            response: function (response) {
-                        console.log('ehehehehhe');
-                
-                if(response.data){
-                    if (response.data.status === false) {
-                        console.log('ehehehehhe');
-                    }
+    function errorInterceptor($q,$location,toaster) {
+        return {            
+            responseError: function (rejection) {
+                if( rejection.status === 404 ) {
+                    toaster.pop('error',rejection.statusText,rejection.status,3000);          
                 }
-
-                return response;
+                if( rejection.status === 403){
+                    toaster.pop('error','Erro no login','Usuário ou Senha inválidos',3000);          
+                }
+                return $q.reject(rejection);
             }
-        }
+        };
     }
 })();
