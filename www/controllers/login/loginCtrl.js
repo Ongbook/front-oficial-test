@@ -31,8 +31,6 @@
  						if(response.status == '200'){
  							localStorage.setItem('jwt',response.data.jwt);				 				
 		 					$state.go('dashboard');
- 						} else {
- 							toaster.pop('error','Dados incorretos','Revise as informações digitadas.',3000);
  						}
  					});				 				
 			}

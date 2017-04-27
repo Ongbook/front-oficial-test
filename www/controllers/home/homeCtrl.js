@@ -5,16 +5,10 @@
 	.module('og.controllers')
 	.controller('homeCtrl', homeCtrl);
 
-	homeCtrl.$inject = ['$http'];
+	homeCtrl.$inject = ['$http','$scope'];
 
-	function homeCtrl($http) {
+	function homeCtrl($http, $scope) {
 		var vm = this;
-		vm.error = error;
-
-		function error() {
-			$http.get('https://api.github.com/users/octocatsaddasa');
-		}
-
 		vm.mainOptions = {
 			navigation: true,
 			navigationPosition: 'right',

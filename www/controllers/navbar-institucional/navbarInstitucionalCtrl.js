@@ -5,9 +5,9 @@
   .module('og.controllers')
 		.controller('navbarInstitucionalCtrl', navbarInstitucionalCtrl);
 
-		navbarInstitucionalCtrl.$inject = ['$uibModal','$scope','toaster', '$state','entitiesServiceApi'];
+		navbarInstitucionalCtrl.$inject = ['$uibModal','toaster', '$state','entitiesServiceApi'];
 
-		function navbarInstitucionalCtrl($uibModal,$scope, toaster, $state,entitiesServiceApi) {
+		function navbarInstitucionalCtrl($uibModal, toaster, $state,entitiesServiceApi) {
 			var vm = this;
 			vm.register = register;
 
@@ -28,9 +28,8 @@
 				 		function sendRegister(objParam) {
 				 			if (objParam) {
 				 				entitiesServiceApi.registerUser(objParam)
-				 					.then(function (response) {debugger;
-				 						if(response.data.jwt){
-				 							localStorage.setItem('jwt',response.data.jwt);				 				
+				 					.then(function (response) {
+				 						if(response.data.jwt){			 				
 							 				modalInstance.close();
 							 				toaster.pop('success','Sucesso','Cadastro efetuado com sucesso',2000);
 						 					setTimeout(function(){
@@ -43,7 +42,6 @@
 				 			}		
 				 		}
 				 	},
-				 	scope:$scope,
 				 	controllerAs: 'modal'
 				 });
 			}
