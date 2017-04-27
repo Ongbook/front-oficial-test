@@ -24,7 +24,8 @@
     "bootstrap": "^3.3.7",
     "angular-fullpage.js": "^0.2.1",
     "angular-messages": "^1.6.1",
-    "AngularJS-Toaster": "angularjs-toaster#^2.1.0"
+    "AngularJS-Toaster": "angularjs-toaster#^2.1.0",
+    "satellizer": "^0.15.5"
   },
   "resolutions": {
     "angular": "1.6.1"

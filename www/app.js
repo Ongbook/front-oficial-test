@@ -12,6 +12,7 @@
 		'toaster',
 		'ui.bootstrap',
 		'fullPage.js',
+		'satellizer',
 		'og.controllers',
 		'og.services',
 		'og.directives'

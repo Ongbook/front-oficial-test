@@ -5,11 +5,10 @@
 	.module('og.controllers')
 	.controller('homeCtrl', homeCtrl);
 
-	homeCtrl.$inject = [];
+	homeCtrl.$inject = ['$http','$scope'];
 
-	function homeCtrl() {
+	function homeCtrl($http, $scope) {
 		var vm = this;
-
 		vm.mainOptions = {
 			navigation: true,
 			navigationPosition: 'right',
