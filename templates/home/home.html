@@ -8,13 +8,8 @@
                 <div class="over-map" id="over-map">
                     <div class="container">
                         <h1>
-                            Entidades Sociais a sua volta, você conhece?
+                            Entidades Sociais a sua volta
                         </h1>
-
-                        <h2>
-                            Um local para Solidários conhecerem as necessidades de Entidades que trabalham para resolver problemas sociais.
-                        </h2>
-
                         <button id="btn-know-now" class="btn btn-default" ng-click="vm.error()">
                             Conheça Agora
                         </button>
@@ -31,13 +26,13 @@
             <div id="layer-over-video">
                 <div class="container">
                     <h1>Queremos e fazemos</h1>
-                    <h4>Catálogo de Entidades Sociais e suas necessidades, daquelas com as causas mais nobres do planeta.<br>Todas engajadas em prol dos <a href="https://nacoesunidas.org/pos2015/agenda2030/" target="_blank">Objetivos de Desenvolvimento Sustentável</a>.</h4>
+                    <h4>Catálogo de Entidades Sociais e suas necessidades.<br>Todas engajadas em prol dos <a href="https://nacoesunidas.org/pos2015/agenda2030/" target="_blank">Objetivos de Desenvolvimento Sustentável</a>.</h4>
                     <div class="rows">
                         <h2>Metas</h2>
-                        <div class="col-md-6">
+                        <div class="col-md-12">
                             <div class="panel panel-default panel-bg-video">
                                 <div class="panel-body panel-queremos">
-                                    <h3>Para as Entidades Sociais</h3>
+                                    <!-- <h3>Para as Entidades Sociais</h3> -->
                                     <ul>
                                         <li>Gerir suas <strong>necessidades</strong>: (postar, manter e dar feedback dos resultados)
                                             <ul>
@@ -53,7 +48,7 @@
                             </div>
                         </div>
 
-                        <div class="col-md-6">
+                        <!-- <div class="col-md-6">
                             <div class="panel panel-default panel-bg-video">
                                 <div class="panel-body panel-queremos">
                                     <h3>Para as pessoas com o perfil Solidário</h3>
@@ -65,7 +60,8 @@
                                     </ul>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
+
                         <blockquote id="bq-drucker" class="pull-right">
                             <h5>"O que conta não é o quanto você tem, e sim, o quanto você contribui".</h5>
                             <small>Peter Drucker em <cite title="Drucker Institute"><a href="http://www.druckerinstitute.com/drucker-nonprofit-innovation-award/" target="_blank">NONPROFIT</a></cite>. <a href="http://migre.me/mRmc2" target="_blank">Slide</a></small>
@@ -89,9 +85,9 @@
                 <div class="col-md-6">
                     <div class="jumbotron">
                         <h5>Você é responsável por ela?</h5>
-                        <a class="btn btn-success btn-lg btn-block" id="btn-cadastre" href="javascript:void(0)" (click)="showRegister()">Cadastre-se</a>
+                        <a class="btn btn-success btn-lg btn-block" id="btn-cadastre" ng-click="vm.register()">Cadastre-se</a>
                         <h5>Ou conhece alguém que seja coordenador e ou responável?</h5>
-                        <a class="btn btn-primary btn-lg btn-block" href="javascript:void(0)" (click)="showModalDivulgue()">Envie ao amigo</a>
+                        <a class="btn btn-primary btn-lg btn-block" ng-click="vm.spread()">Envie ao amigo</a>
                     </div>
                 </div>
             </div>
@@ -109,7 +105,7 @@
                             <img class="icons-apoie" src="../assets/img/apoie/viral.png" alt="Viralize essa idéia com todos!"><br>
                         </div>
                         <div class="panel-footer">
-                            <a class="btn btn-warning btn-lg btn-block" href="javascript:void(0)" (click)="showModalDivulgue()">Divulgue</a>
+                            <a class="btn btn-warning btn-lg btn-block" ng-click="vm.spread()">Divulgue</a>
                         </div>
                     </div>
                 </div>
@@ -120,7 +116,7 @@
                             <img class="icons-apoie" src="../assets/img/apoie/financie.png" alt="Acredite nessa idéia com todo seu coração!"><br>
                         </div>
                         <div class="panel-footer">
-                            <a class="btn btn-warning btn-lg btn-block" href="javascript:void(0)" (click)="showModalFomente()">Fomente</a>
+                            <a class="btn btn-warning btn-lg btn-block" ng-click="vm.foment()">Fomente</a>
                         </div>
                     </div>
                 </div>
@@ -131,7 +127,7 @@
                             <img class="icons-apoie" src="../assets/img/apoie/desenvolva.png" alt="Construa algo do bem, que seja à vera, sempre!"><br>
                         </div>
                         <div class="panel-footer">
-                            <a class="btn btn-warning btn-lg btn-block" href="javascript:void(0)" (click)="showModalDesenvolva()">Desenvolva conosco</a>
+                            <a class="btn btn-warning btn-lg btn-block" ng-click="vm.developWithUs()">Desenvolva conosco</a>
                         </div>
                     </div>
                 </div>
@@ -161,7 +157,7 @@
                             <div class="panel-body">
                                 <img class="logo-parceiros" src="../assets/img/apoie/financie.png" title="Torne-se nosso parceiro!" alt="Torne-se nosso parceiro">
                             </div>
-                            <p class="pull-right"><small><a href="javascript:void(0)" (click)="showModalFomente()">Torne-se um</a></small></p>
+                            <p class="pull-right"><small><a ng-click="vm.foment()">Torne-se um</a></small></p>
                         </div>
                     </div>
                 </div>
@@ -227,116 +223,3 @@
     <!-- End: #fullPage -->
 </div>
 <!-- End: homeCtrl -->
-
-
-
-
-
-<!-- Modais -->
-<!-- Divulgue
-<template #divulgue let-c="close" let-d="dismiss">
-    <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="d('Cross click')">
-            <span aria-hidden="true">&times;</span>
-        </button>
-        <h3 class="modal-title">Divulgue</h3>
-    </div>
-    <div class="modal-body">
-     <div id="content-modal">
-        <div class="col-md-7">
-            <iframe id="like-box-face" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fongbook&tabs&width=300&height=214&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=1877935842437516" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-        </div>
-        <div class="col-md-5">
-            <form class="form">
-                <div class="form-group">
-                    <input type="email" class="form-control" id="origem-msg-divulgue" placeholder="De: maria@email.com">
-                </div>
-                <div class="form-group">
-                    <input type="email" class="form-control" id="destino-msg-divulgue" placeholder="Para: joao@email.com">
-                </div>
-                <div class="form-group">
-                    <textarea class="form-control" rows="3" id="conteudo-msg-divulgue" placeholder="Mensagem..."></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Enviar</button>
-            </form>
-        </div>
-    </div>
-</div>
-<div class="modal-footer">
-    <div class="jumbotron">
-        <div class="col-md-3">
-            <iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fongbook.org&width=280&layout=box_count&action=recommend&size=small&show_faces=false&share=false&height=65&appId=1877935842437516" width="95" height="65" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-        </div>
-        <div class="col-md-3">
-            <script src="https://apis.google.com/js/platform.js" async defer>{lang: 'pt-BR'}</script>
-            <div class="g-plus" data-action="share" data-annotation="vertical-bubble" data-height="60" data-href="http://ongbook.org"></div>
-        </div>
-        <div class="col-md-3">
-            <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.ongbook.org" data-text="Catálogo de Entidades Sociais com as causas mais nobres do Planeta!" data-via="_Ongbook" data-size="large" data-related="edoura" data-hashtags="ongbook">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-        </div>
-        <div class="col-md-3">
-            <script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: pt_BR</script>
-            <script type="IN/Share" data-url="http://ongbook.org" data-counter="top"></script>
-        </div>
-    </div>
-</div>
-</template>
--->
-
-<!-- Fomente
-<template #fomente let-c="close" let-d="dismiss">
-    <form class="form">
-        <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="d('Cross click')">
-                <span aria-hidden="true">&times;</span>
-            </button>
-            <h3 class="modal-title">Como gostaria de contribuir?</h3>
-        </div>
-        <div class="modal-body">
-            <p>Independente de quem seja e da área que atue, sua participação é fundamental.</p><br>
-            <div class="form-group">
-                <label for="nome-parceiro" class="control-label">Nome</label>
-                <input type="text" class="form-control" id="nome-parceiro">
-            </div>
-            <div class="form-group">
-                <label for="email-parceiro" class="control-label">Email</label>
-                <input type="email" class="form-control" id="email-parceiro">
-            </div>
-            <div class="form-group">
-                <label for="assunto-parceiro" class="control-label">Assunto</label>
-                <input type="text" class="form-control" id="assunto-parceiro">
-            </div>
-            <div class="form-group">
-                <label for="msg-parceiro" class="control-label">Mensagem</label>
-                <textarea class="form-control" rows="3" id="msg-parceiro"></textarea>
-            </div>
-        </div>
-        <div class="modal-footer">
-            <button type="submit" class="btn btn-primary">Enviar</button>
-            <button type="button" class="btn btn-default" data-dismiss="modal" (click)="d('Cross click')">Depois</button>
-        </div>
-    </form>
-</template>
--->
-
-<!-- Desenvolva -->
-<!--
-<template #desenvolva let-c="close" let-d="dismiss">
-    <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="d('Cross click')">
-            <span aria-hidden="true">&times;</span>
-        </button>
-        <h3 class="modal-title">Desenvolva conosco</h3>
-    </div>
-    <div class="modal-body">
-        <img class="img-modal-apoie" src="../img/apoie/git.png" alt="Octocat Github">
-        <blockquote>
-            <p><em>Projetos open source são o que há de mais legal no mundo do desenvolvimento quando se quer aprender novas tecnologias e envolver-se em projetos, seja codificando, documentando, testando ou realizando qualquer tipo de atividade que envolve um projeto.</em></p>
-            <small>Willian Martins em <cite title="Tableless"><a href="http://tableless.com.br/contribuindo-em-projetos-open-source-com-o-github/" target="_blank">Primeiros passos</a>.</cite></small>
-        </blockquote>
-    </div>
-    <div class="modal-footer">
-        <a class="btn btn-primary" href="http://github.com/Ongbook" target="_blank">Repositórios Ongbook</a>
-    </div>
-</template>
--->

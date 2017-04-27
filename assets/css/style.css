@@ -164,8 +164,16 @@ form,fieldset,input,textarea,p,blockquote,th,td {
 }
 
 .navbar-brand img{
-  margin-top: -14px;
-  height: 62px;
+  margin-top: -10px;
+  height: 58px;
+}
+
+#title-ongbook {
+    font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    color: #f19c14 !important;
+    padding-left: 0px !important;
 }
 
 .navbar-login
@@ -253,6 +261,7 @@ form,fieldset,input,textarea,p,blockquote,th,td {
 
 #section0 .over-map .container {
   position: absolute;
+  width: 80%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -283,9 +292,21 @@ form,fieldset,input,textarea,p,blockquote,th,td {
 }
 
 #btn-know-now {
+  margin-top: 20px;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
+  color: wheat;
+  font-size: large;
+  background-color: #2c3e50;
+  border-color: #2c3e50;
+  padding: 12px 30px;
+}
+
+#btn-know-now:hover{
+  color: wheat;
+  background-color: #1a242f;
+  border-color: #161f29;
 }
 /* End #section0 - maps ******************************************/
 

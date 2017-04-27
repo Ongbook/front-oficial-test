@@ -5,7 +5,7 @@
     .directive('navbarHomeInstitucional',
       function () {
         return{
-          templateUrl: 'templates/navbar-institucional/narbar-home-institucional.html'
+          templateUrl: 'templates/navbar-institucional/navbar-home-institucional.html'
         }
       });
 })();
