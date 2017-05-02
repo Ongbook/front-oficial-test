@@ -169,11 +169,11 @@ form,fieldset,input,textarea,p,blockquote,th,td {
 }
 
 #title-ongbook {
-    font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
-    font-size: 22px;
-    font-weight: bold;
-    color: #f19c14 !important;
-    padding-left: 0px !important;
+  font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+  font-size: 22px;
+  font-weight: bold;
+  color: #f19c14 !important;
+  padding-left: 0px !important;
 }
 
 .navbar-login
@@ -455,6 +455,21 @@ form,fieldset,input,textarea,p,blockquote,th,td {
   margin-left: auto;
   margin-right: auto;
   width: 60%;
+}
+
+#img-modal-support{
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+#blockquote-support{
+  padding: 10px 20px;
+  margin: 0 0 20px;
+  font-size: 17.5px;
+}
+
+#blockquote-support p{
+  margin: 0 0 10px;
 }
 /* End #section3 - support *****************************************/
 
