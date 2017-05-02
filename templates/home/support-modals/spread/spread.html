@@ -1,0 +1,44 @@
+<div class="modal-header">
+    <span class="pull-right close" aria-hidden="true"
+    ng-click="modal.cancel()">&times;</span>
+    <h3 class="modal-title">Divulgue</h3>
+</div>
+<div class="modal-body">
+    <div class="container-fluid" style="background-color:#ecf0f1; padding:2%;">
+        <div class="col-sm-3">
+            <div id="fb-root"></div>
+            <script>(function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.0";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));</script>
+            <div class="fb-like" data-href="http://ongbook.org" data-layout="box_count" data-action="recommend" data-show-faces="false" data-share="true"></div>
+        </div>
+
+        <div class="col-sm-3">
+            <!-- Posicione esta tag no cabeçalho ou imediatamente antes da tag de fechamento do corpo. -->
+            <script src="https://apis.google.com/js/platform.js" async defer>
+                lang: pt_BR
+            </script>
+            <!-- Posicione esta tag onde você deseja que o botão compartilhar apareça. -->
+            <div itemscope itemtype="http://schema.org/Organization" class="g-plus" data-action="share" data-annotation="vertical-bubble" data-height="60" data-width="90" data-href="http://ongbook.org">
+                <h1 itemprop="name">Ongbook</h1>
+                <p itemprop="description">Catálogo de Entidades Sociais com as causas mais nobres do planeta.</p>
+                <img itemprop="image" src="https://ongbook-9c3ec.firebaseapp.com/img/logo.png" />
+            </div>
+        </div>
+
+        <div class="col-sm-3">
+            <script src="//platform.linkedin.com/in.js" type="text/javascript">
+                lang: pt_BR
+            </script>
+            <script type="IN/Share" data-counter="top"></script>
+        </div>
+
+        <div class="col-sm-3">
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://ongbook.org" data-text="Catálogo de Entidades Sociais com as causas mais nobres do planeta. Conheça!" data-via="_Ongbook" data-size="large" data-related="_Ongbook" data-hashtags="ongbook">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        </div>
+    </div>
+</div>

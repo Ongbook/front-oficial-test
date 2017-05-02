@@ -25,7 +25,8 @@
     "angular-fullpage.js": "^0.2.1",
     "angular-messages": "^1.6.1",
     "AngularJS-Toaster": "angularjs-toaster#^2.1.0",
-    "satellizer": "^0.15.5"
+    "satellizer": "^0.15.5",
+    "ngmap": "^1.18.4"
   },
   "resolutions": {
     "angular": "1.6.1"

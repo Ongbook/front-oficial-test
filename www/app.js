@@ -8,6 +8,7 @@
 	angular.module('ongbook',[
 		'ui.router',
 		'ngAnimate',
+		'ngMap',
 		'ngMessages',
 		'toaster',
 		'ui.bootstrap',
@@ -16,6 +17,6 @@
 		'og.controllers',
 		'og.services',
 		'og.directives'
-    ]);
+		]);
 
 })();

@@ -15,7 +15,7 @@
 
 		function developWithUs() {
 			var modalInstance = $uibModal.open({
-				templateUrl: '../../../templates/home/support-modals/develop.html',
+				templateUrl: '../../../templates/home/support-modals/develop/develop.html',
 				size: 'md',
 				backdrop: false,
 				controller: function ($uibModalInstance) {
@@ -33,7 +33,7 @@
 
 		function spread() {
 			var modalInstance = $uibModal.open({
-				templateUrl: '../../../templates/home/support-modals/spread.html',
+				templateUrl: '../../../templates/home/support-modals/spread/spread.html',
 				size: 'md',
 				backdrop: false,
 				controller: function ($uibModalInstance) {
@@ -51,7 +51,7 @@
 
 		function foment() {
 			var modalInstance = $uibModal.open({
-				templateUrl: '../../../templates/home/support-modals/foment.html',
+				templateUrl: '../../../templates/home/support-modals/foment/foment.html',
 				size: 'md',
 				backdrop: false,
 				controller: function ($uibModalInstance) {
@@ -69,7 +69,7 @@
 
 		// fullPage.js
 		vm.mainOptions = {
-			navigation: true,
+			/*navigation: true,*/
 			anchors: ['mapa', 'queremosefazemos', 'responsavelporumaong', 'apoie', 'parceiros', 'contato'],
 			navigationPosition: 'right',
 			scrollingSpeed: 1000
