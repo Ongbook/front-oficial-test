@@ -2,7 +2,7 @@
   <div class="container">
     <div class="card card-container">
       <!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
-      <img id="profile-img" class="" src="assets/img/logo.png"/>
+      <img id="profile-img-card" class="" src="assets/img/logo.png"/>
       <p id="profile-name" class="profile-name-card"></p>
       <form novalidate name="form" class="form-signin">
         <div ng-messages="form.email.$error" ng-if="form.email.$touched || vm.error">
@@ -31,13 +31,13 @@
     <a href class="forgot-password">
       Esqueceu sua senha?
     </a>
-    <br/>  
+    <br/>
     <a href>
         <img src="http://minicursogit.github.io/images/logos/github-icon.png" style="width:40px"
         ng-click="vm.authenticate('github')">
     </a>
-    <br/>  
-    <a ui-sref="home">VOLTAR</a>    
+    <br/>
+    <a ui-sref="home">VOLTAR</a>
   </div><!-- /card-container -->
 </div><!-- /container -->
 </div>

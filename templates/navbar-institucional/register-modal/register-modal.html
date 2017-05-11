@@ -1,5 +1,5 @@
 <form novalidate name="form" class="form">
-    <div class="modal-header">        
+    <div class="modal-header">
         <span class="pull-right close" aria-hidden="true"
           ng-click="modal.cancel()">&times;</span>
         <h3 class="modal-title">Cadastre sua Entidade Social</h3>
@@ -18,7 +18,7 @@
         <!-- <div ng-messages="form.user.$error" ng-if="form.user.$touched || vm.error">
             <div ng-messages-include="templates/navbar-institucional/register-modal/validate/user.html"></div>
         </div> -->
-        
+
         <div class="form-group">
             <label for="name" class="control-label">Nome</label>
             <input type="text" class="form-control" name="username" id="username"
@@ -26,7 +26,7 @@
                 ng-model="cad.username"
                 ng-minlength="6"
                 ng-maxlength="100"
-                placeholder="" 
+                placeholder=""
                 required
                 plac>
         </div>
@@ -34,7 +34,7 @@
             <label for="email" class="control-label">Email</label>
             <input type="email" class="form-control" name="email" id="email"
                 ng-class="{'input-invalid': form.email.$touched && form.email.$invalid}"
-                ng-model="cad.email" 
+                ng-model="cad.email"
                 ng-pattern='/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/'
                 required>
         </div>
@@ -47,6 +47,7 @@
               ng-maxlength="100"
               required>
         </div>
+        <span class="help-block"><small>Ao clicar em <strong>Criar conta</strong>, você concorda com nossos <a href="" target="_blank">Termos</a> e que leu nossa <a href="" target="_blank">Política de Dados</a>.</small></span>
     </div>
     <div class="modal-footer">
         <button type="button" class="btn btn-default"
@@ -54,6 +55,6 @@
         <button type="submit" class="btn btn-primary"
           ng-click="form.$valid ? modal.sendRegister(cad) : vm.showError(true)"
           ng-show="form.$valid"
-          >Cadastrar</button>
+          >Criar conta</button>
     </div>
 </form>
