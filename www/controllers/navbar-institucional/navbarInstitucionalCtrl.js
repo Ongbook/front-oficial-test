@@ -29,17 +29,17 @@
 				 			if (objParam) {
 				 				entitiesServiceApi.registerUser(objParam)
 				 					.then(function (response) {
-				 						if(response.data.jwt){			 				
+				 						if(response.data.jwt){
 							 				modalInstance.close();
 							 				toaster.pop('success','Sucesso','Cadastro efetuado com sucesso',2000);
 						 					setTimeout(function(){
-						 						$state.go('login');						 					
+						 						$state.go('login');
 						 					},2000);
 				 						} else {
 				 							toaster.pop('error','Dados incorretos','Revise as informações digitadas.',3000);
 				 						}
-				 					}); 
-				 			}		
+				 					});
+				 			}
 				 		}
 				 	},
 				 	controllerAs: 'modal'
