@@ -35,7 +35,7 @@ http-server
 
 ## Suporte
 
-Por favor [abra uma issue](https://github.com/ongbook/front-oficial) para suporte.
+Por favor [abra uma issue](https://github.com/ongbook/front-oficial/issues) para suporte.
 
 ## Contribuição
 
