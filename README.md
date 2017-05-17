@@ -5,7 +5,7 @@ Este repositório equivale aos trabalhos da ongbook respectivos ao front end.
 ## Sumário
 
 - [Instalação](#Instalação)
-- [Como utilizar](#Como Utilizar)
+- [Como utilizar](#Utilizando)
 - [Suporte](#Suporte)
 - [Contribuição](#Contribuição)
 
