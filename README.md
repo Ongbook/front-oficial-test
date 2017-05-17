@@ -4,10 +4,10 @@ Este repositório equivale aos trabalhos da ongbook respectivos ao front end.
 
 ## Sumário
 
-- [Instalação](#Instalação)
-- [Como utilizar](#Utilizando)
-- [Suporte](#Suporte)
-- [Contribuição](#Contribuição)
+- [Instalação](#instalação)
+- [Como utilizar](#utilizando)
+- [Suporte](#suporte)
+- [Contribuição](#contribuição)
 
 ## Instalação
 
