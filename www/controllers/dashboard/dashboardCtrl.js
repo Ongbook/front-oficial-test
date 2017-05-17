@@ -18,11 +18,11 @@
 			}
 
 			if (entitiesServiceApi.isLogged()){
-				
+
 			}
 			else {
 				$state.go('home');
-				toaster.pop('error','Usuário não logado','Faça o login antes de entrar',3000);
+				toaster.pop('error','Usuário não logado','Faça o login antes de entrar',2000);
 			}
 		}
 })();
