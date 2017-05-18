@@ -4,6 +4,8 @@
 	angular.module('og.services',[]);
 	angular.module('og.directives',[]);
 	angular.module('og.interceptors',[]);
+	angular.module('og.components',[]);
+
 
 	angular.module('ongbook',[
 		'ui.router',
@@ -13,9 +15,11 @@
 		'ui.bootstrap',
 		'fullPage.js',
 		'satellizer',
+		'angular.viacep',
 		'og.controllers',
 		'og.services',
-		'og.directives'
+		'og.directives',
+		'og.components'
     ]);
 
 })();

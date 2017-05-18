@@ -26,7 +26,11 @@
 
 		var _isLogged = function (objParam) {
 			if(localStorage.getItem('jwt'))
-				return localStorage.getItem('jwt') ? true : false;			
+				return localStorage.getItem('jwt') ? true : false;
+		};
+
+		var _getCep = function (cep,type) {
+			return $http.post(config.cep+cep+'/'+type);
 		};
 
 		return {
@@ -34,7 +38,8 @@
 			setEntities:_setEntities,
 			registerUser:_registerUser,
 			registerEntitie:_registerEntitie,
-			isLogged:_isLogged
+			isLogged:_isLogged,
+			getCep:_getCep
 		};
 	}
 })();

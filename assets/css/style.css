@@ -14,6 +14,10 @@ form,fieldset,input,textarea,p,blockquote,th,td {
   border-color: green;
 }
 
+.search {
+	font-size: large;
+}
+
 #register-social-entity{
   background: linear-gradient(180deg, #105596 30%, white 80%, #000 100%);
   height: 100%;

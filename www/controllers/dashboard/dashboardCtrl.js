@@ -8,14 +8,15 @@
 		dashboardCtrl.$inject = ['$state','toaster','entitiesServiceApi'];
 
 		function dashboardCtrl($state, toaster, entitiesServiceApi) {
-			var vm = this;
+			var vm 		= this;
 			vm.logout = logout;
-
 
 			function logout() {
 				localStorage.clear();
 				$state.go('home');
 			}
+
+
 
 			if (entitiesServiceApi.isLogged()){
 

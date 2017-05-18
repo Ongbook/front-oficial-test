@@ -21,7 +21,7 @@
 	          controllerAs: 'vm'
 	        }
 	      }
-	    })	   
+	    })
 	    .state('login', {
 	      url: '/login',
 	      views:{
@@ -43,10 +43,10 @@
 	      }
 	    })
 	    .state('new-entitie', {
-	      url: '/dashboard/entidade',	      
-          templateUrl: '../templates/dashboard/dashboard/entities/entitie.html',
+	      url: '/dashboard/entidade',
+          // templateUrl: '../templates/dashboard/dashboard/entities/entitie.html',
           controller: 'entitiesCtrl',
-          controllerAs: 'vm'	       
+          controllerAs: 'vm'
 	    })
 	    ;
 	    $urlRouterProvider.otherwise('/');

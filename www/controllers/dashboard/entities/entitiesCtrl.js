@@ -9,9 +9,15 @@
 
 		function entitiesCtrl(entitiesServiceApi) {
 			var vm = this;
+			vm.registerEntitie = registerEntitie;
+
+			function registerEntitie() {
+
+			}
+
 
 			if (entitiesServiceApi.isLogged()){
-				
+
 			}
 			else {
 				$state.go('home');
