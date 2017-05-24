@@ -16,10 +16,17 @@
 		'fullPage.js',
 		'satellizer',
 		'angular.viacep',
+		'ngMap',
 		'og.controllers',
 		'og.services',
 		'og.directives',
 		'og.components'
     ]);
+
+	// NgMap.getMap().then(function(map) {
+	// 	    console.log(map.getCenter());
+	// 	    console.log('markers', map.markers);
+	// 	    console.log('shapes', map.shapes);
+	// 	  });
 
 })();

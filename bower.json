@@ -26,7 +26,8 @@
     "angular-messages": "^1.6.1",
     "AngularJS-Toaster": "angularjs-toaster#^2.1.0",
     "satellizer": "^0.15.5",
-    "angular-viacep": "^0.1.0"
+    "angular-viacep": "^0.1.0",
+    "ngmap": "^1.18.4"
   },
   "resolutions": {
     "angular": "1.6.1"

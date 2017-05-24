@@ -11,19 +11,42 @@
 			}
 		});
 
-		painelDashboard.$inject = ['entitiesServiceApi','$scope','viaCEP'];
-		function painelDashboard(entitiesServiceApi,$scope, viaCEP) {
+		painelDashboard.$inject = ['entitieServiceApi','$scope', 'toaster','$state'];
+		function painelDashboard(entitieServiceApi,$scope,toaster,$state) {
 
 			$scope.getCep = getCep;
+			$scope.setFullAddress = setFullAddress;
+			$scope.nextStepRegister = nextStepRegister;
 			$scope.cad 		= {};
-			$scope.result = {};
+			$scope.status = localStorage.getItem('status') ? localStorage.getItem('status') : 0;
 
 			function getCep(cep) {
-				viaCEP.get(cep)
+				entitieServiceApi.getCep(cep,'json')
 					.then(function (res) {
-						$scope.result = res;
+						entitieServiceApi.setEntitie(JSON.stringify(res.data));
+						$scope.status = 1;
 					});
 			}
+
+			function nextStepRegister () {
+				if ($scope.status === 1) {
+					$scope.status = 2;
+				}
+			}
+
+			function setFullAddress() {
+				var address = JSON.parse(entitieServiceApi.getAddress());
+					address.street = $scope.cad.street;
+					address.number = $scope.cad.number;
+					var _completeRegister = entitieServiceApi.setFullAddress(address);
+					if (_completeRegister) {
+						$scope.status = 3;
+						localStorage.setItem('status',$scope.status.toString());
+					}
+
+			}
+
+
 
 		}
 

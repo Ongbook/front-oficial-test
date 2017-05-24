@@ -14,8 +14,20 @@ form,fieldset,input,textarea,p,blockquote,th,td {
   border-color: green;
 }
 
-.search {
-	font-size: large;
+#search {
+	font-size: 22px !important;
+  padding-left: 10px !important;
+}
+#number {
+	width: 100px;
+}
+
+#street {
+  width: 600px;
+}
+
+#header-component {
+	padding-bottom: 20px;
 }
 
 #register-social-entity{

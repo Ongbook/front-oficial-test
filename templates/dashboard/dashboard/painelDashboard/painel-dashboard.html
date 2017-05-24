@@ -1,18 +1,108 @@
 <div class="row">
 	<div class="col-lg-12">
-		<h1 class="page-header">Apareça no mapa!</h1>
+		<h1 class="page-header"
+			ng-if="status != 3">Apareça no mapa!</h1>
+		<h1 class="page-header"
+		ng-if="status == 3">Painel</h1>
 	</div>
 </div>
 <div class="row">
-	<div class="col-lg-3 col-md-6">
+
+		<div class="col-md-12" id="header-component"
+			ng-if="status != 3">
+			<h3>Cadastre sua Entidade Social</h3>
+		</div>
+		</div>
+	<div class="col-md-12">
 		<form novalidate name="form">
-			<div>
-				<input type="text" placeholder="Digite seu CEP" name="cep"
+			<div class="col-md-12"
+				ng-if="status == 0">
+				<input class="input-lg" type="text" placeholder="Digite seu CEP" name="cep"
 					ng-model="cad.cep">
-				<span class="fa fa-search search"
+				<span class="fa fa-search" id="search"
 					ng-click="getCep(cad.cep)">
 				</span>
 			</div>
+			<div class="col-md-12"
+				ng-if="status == 1">
+				<input class="input-lg" type="text" placeholder="Digite seu logradouro" name="street" id="street"
+					ng-model="cad.street"
+					ng-maxlength="100"
+					ng-required="true">
+				<input class="input-lg" type="text" placeholder="N º" name="number" id="number"
+					ng-model="cad.number"
+					ng-maxlength="8"
+					ng-required="true">
+				<button class="btn btn-primary btn-lg"
+					ng-click="nextStepRegister()">
+					Próximo
+				</button>
+			</div>
+			<div class="col-md-12"
+				ng-if="status == 2">
+				<input class="input-lg" type="text" placeholder="Nome da ONG" name="nameOng" id="nameOng"
+					ng-model="cad.nameOng"
+					ng-maxlength="100"
+					ng-required="true">
+				<input class="input-lg" type="text" placeholder="Área de atuação" name="acting" id="acting"
+					ng-model="cad.acting"
+					ng-maxlength="8"
+					ng-required="true">
+				<button class="btn btn-primary btn-lg"
+					ng-click="setFullAddress(cad)">
+					Confirmar Endereço
+				</button>
+			</div>
 		</form>
+		<div
+			ng-if="status == 3">
+      <div class="row">
+        <div class="col-lg-3 col-md-6">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-xs-3">
+	                        <i class="fa fa-home fa-5x"></i>
+                        </div>
+                        <div class="col-xs-9 text-right">
+                            <div class="huge">1</div>
+                            <div>Entidade</div>
+                        </div>
+                    </div>
+                </div>
+                <a href="#">
+                    <div class="panel-footer">
+                        <span class="pull-left">Entidade</span>
+                        <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                        <div class="clearfix"></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <div class="panel panel-green">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-xs-3">
+                        	<i class="fa fa-heart-o fa-5x"></i>
+                        </div>
+                        <div class="col-xs-9 text-right">
+                            <div class="huge">0</div>
+                            <div>Necessidade</div>
+                        </div>
+                    </div>
+                </div>
+                <a href="#">
+                    <div class="panel-footer">
+                        <span class="pull-left">Necessidades</span>
+                        <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                        <div class="clearfix"></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    	</div>
+  	</div>
+		<!-- <map></map> -->
 	</div>
 </div>
