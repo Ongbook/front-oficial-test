@@ -48,6 +48,12 @@
           controller: 'entitiesCtrl',
           controllerAs: 'vm'
 	    })
+	    .state('entitie', {
+	      url: '/dashboard/cadastro',
+          templateUrl: '../templates/dashboard/dashboard/entities/entitie.html',
+          controller: 'entitiesCtrl',
+          controllerAs: 'vm'
+	    })
 	    ;
 	    $urlRouterProvider.otherwise('/');
 	  }]);

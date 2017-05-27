@@ -38,10 +38,11 @@
 				var address = JSON.parse(entitieServiceApi.getAddress());
 					address.street = $scope.cad.street;
 					address.number = $scope.cad.number;
-					var _completeRegister = entitieServiceApi.setFullAddress(address);
+					var _completeRegister = entitieServiceApi.setFullAddress(JSON.stringify(address));
 					if (_completeRegister) {
 						$scope.status = 3;
 						localStorage.setItem('status',$scope.status.toString());
+						$state.reload();
 					}
 
 			}
