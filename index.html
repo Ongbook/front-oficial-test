@@ -22,13 +22,13 @@
 
 <body>
   <toaster-container></toaster-container>
-  <ui-view></ui-view>
+  <div ui-view></div>
 
   <script src="lib/jquery/dist/jquery.min.js"></script>
   <script src="lib/angular/angular.min.js"></script>
   <script src="lib/bootstrap/dist/js/bootstrap.js"></script>
-  <script src="assets/js/sb-admin-2.js"></script>
 
+  <script src="assets/js/sb-admin-2.js"></script>
   <script src="lib/angular-ui-router/release/angular-ui-router.js"></script>
   <script src="lib/angular-bootstrap/ui-bootstrap.js"></script>
   <script src="lib/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
@@ -38,41 +38,27 @@
   <script src="lib/fullpage.js/vendors/jquery.slimscroll.min.js"></script>
   <script src="lib/fullpage.js/dist/jquery.fullpage.min.js"></script>
   <script src="lib/angular-fullpage.js/angular-fullpage.min.js"></script>
-  <script src="lib/satellizer/dist/satellizer.min.js"></script>
-  <script src="lib/ngmap/build/scripts/ng-map.min.js"></script>
-  <script src="lib/angular-viacep/dist/angular-viacep.min.js"></script>
 
 
+  <script src="app/app.js"></script>
+  <script src="app/routes.js"></script>
 
-  <script src="www/app.js"></script>
-  <script src="www/routes.js"></script>
+  <script src="app/institutional/institutionalController.js"></script>
+  <script src="app/institutional/login/loginController.js"></script>
+  <script src="app/dashboard/dashboardController.js"></script>
+  <script src="app/dashboard/painel/entitie/entitieController.js"></script>
+  <script src="app/dashboard/painel/entitie/entitiesServiceApi.js"></script>
+  <script src="app/dashboard/painel/painelController.js"></script>
+  <script src="app/dashboard/painel/necessity/necessityController.js"></script>
+  <script src="app/dashboard/painel/necessity/necessityServiceApi.js"></script>
 
-  <script src="www/controllers/home/homeCtrl.js"></script>
-  <script src="www/controllers/dashboard/config/configCtrl.js"></script>
-  <script src="www/controllers/dashboard/entities/entitiesCtrl.js"></script>
-  <script src="www/controllers/dashboard/dashboardCtrl.js"></script>
-  <script src="www/controllers/navbar-dashboard/navbarCtrl.js"></script>
-  <script src="www/controllers/navbar-institucional/navbarInstitucionalCtrl.js"></script>
-  <script src="www/controllers/register-social-entity/registerSocialEntityCtrl.js"></script>
-  <script src="www/controllers/login/loginCtrl.js"></script>
+  <script src="app/institutional/register/registerServiceApi.js"></script>
 
-  <script src="www/directives/dashboard/navbar-top-dashboard.js"></script>
-  <script src="www/directives/dashboard/dashboard.js"></script>
-  <script src="www/directives/navbar/navbar-home-institucional.js"></script>
-
-  <script src="www/services/entities/entitiesServiceApi.js"></script>
-  <script src="www/services/config/configServiceApi.js"></script>
-  <script src="www/services/login/loginServiceApi.js"></script>
-  <script src="www/services/localstorage/localStorageService.js"></script>
-
-  <script src="www/components/registerEntitie/registerComponent.js"></script>
-  <script src="www/components/painelDashboard/painelDashboardComponent.js"></script>
-  <script src="www/services/entities/entitieServiceApi.js"></script>
-
-  <script src="www/interceptors/errorInterceptor.js"></script>
-
-  <script src="www/value/interceptorsConfig.js"></script>
-  <script src="www/value/config.js"></script>
+  <script src="app/institutional/login/loginServiceApi.js"></script>
+  <script src="app/dashboard/navbarDashboard.component.js"></script>
+  <script src="app/interceptors/errorInterceptor.js"></script>
+  <script src="app/value/interceptorsConfig.js"></script>
+  <script src="app/value/config.js"></script>
 
 </body>
 

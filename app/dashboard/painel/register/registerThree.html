@@ -1,0 +1,14 @@
+<div class="col-md-12">
+	<input class="input-lg" type="text" placeholder="Nome da ONG" name="nameOng" id="nameOng"
+		ng-model="cad.nameOng"
+		ng-maxlength="100"
+		ng-required="true">
+	<input class="input-lg" type="text" placeholder="Área de atuação" name="acting" id="acting"
+		ng-model="cad.acting"
+		ng-maxlength="8"
+		ng-required="true">
+	<button class="btn btn-primary btn-lg"
+		ng-click="setFullAddress(cad)">
+		Confirmar Endereço
+	</button>
+</div>
