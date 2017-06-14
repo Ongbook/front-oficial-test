@@ -52,6 +52,13 @@
 			return localStorage.getItem('status');
 		};
 
+		var _setEntitieFullRegister = function (entitie) {
+			return localStorage.setItem('entitie',entitie);
+		};
+		var _getEntitieFullRegister = function (entitie) {
+			return localStorage.getItem('entitie');
+		};
+
 		return {
 			setFullAddress:_setFullAddress,
 			getAddress:_getAddress,
@@ -61,7 +68,9 @@
 			setEntities:_setEntities,
 			registerUser:_registerUser,
 			registerEntitie:_registerEntitie,
-			isLogged:_isLogged
+			isLogged:_isLogged,
+			setEntitieFullRegister:_setEntitieFullRegister,
+			getEntitieFullRegister:_getEntitieFullRegister
 		};
 	}
 })();

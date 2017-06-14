@@ -10,9 +10,6 @@
 
 	function painelController(entitiesServiceApi,loginServiceApi,$state,toaster) {
 		var vm = this;
-
-
-
 	}
 
 })();

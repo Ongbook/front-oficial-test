@@ -16,6 +16,7 @@
 		$scope.getCep = getCep;
 		$scope.nextStepRegister = nextStepRegister;
 		$scope.setFullAddress = setFullAddress;
+		$scope.setFullRegister = setFullRegister;
 		$scope.cad = {};
 
 		function getCep(cep) {
@@ -28,18 +29,24 @@
 
 		function nextStepRegister () {
 			if ($scope.statusView === 'registerTwo') {
-				$scope.statusView = 'registerThree';
+				setTimeout(function () {
+					$scope.statusView = 'registerThree';
+				},300);
 			}
 		}
 
 		function setFullAddress(cad) {
+			var _entitie = { "nameOng": cad.nameOng, "acting":cad.acting };
+			entitiesServiceApi.setEntitieFullRegister(JSON.stringify(_entitie));
 			var _address = JSON.parse(entitiesServiceApi.getAddress());
-				_address.street = $scope.cad.street;
-				_address.number = $scope.cad.number;
-				var _completeRegister = entitiesServiceApi.setFullAddress(JSON.stringify(_address));debugger;
-				$state.transitionTo('painel');
-				// localStorage.remoteItem('address');
-
+			_address.street = $scope.cad.street;
+			_address.number = $scope.cad.number;
+			var _completeRegister = entitiesServiceApi.setFullAddress(JSON.stringify(_address));
+			$state.go('painel');
+		}
+		function setFullRegister(cad) {debugger;
+			entitiesServiceApi.setFullAddress(JSON.stringify(cad));
+			$state.go('painel');
 		}
 
 		function logout() {

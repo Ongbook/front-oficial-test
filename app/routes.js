@@ -46,7 +46,7 @@
      		}
      	})
      	.state('painel',{
-     		url: 'painel',
+     		url: '/painel',
      		views: {
      			'':{
      				templateUrl: '../app/dashboard/painel/painel.html', controller: 'painelController'
