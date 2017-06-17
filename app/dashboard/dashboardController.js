@@ -22,12 +22,15 @@
 		function getCep(cep) {
 			entitiesServiceApi.getCep(cep,'json')
 				.then(function (res) {
+					$scope.cad = res.data;
+					console.log($scope.cad);
 					entitiesServiceApi.setEntitie(JSON.stringify(res.data));
 					$scope.statusView = 'registerTwo';
 				});
 		}
 
 		function nextStepRegister () {
+			console.log($scope.cad);
 			if ($scope.statusView === 'registerTwo') {
 				setTimeout(function () {
 					$scope.statusView = 'registerThree';
@@ -44,7 +47,7 @@
 			var _completeRegister = entitiesServiceApi.setFullAddress(JSON.stringify(_address));
 			$state.go('painel');
 		}
-		function setFullRegister(cad) {debugger;
+		function setFullRegister(cad) {
 			entitiesServiceApi.setFullAddress(JSON.stringify(cad));
 			$state.go('painel');
 		}
@@ -61,6 +64,13 @@
 		if (!entitiesServiceApi.isLogged()){
 			$state.go('home');
 			toaster.pop('error','Usuário não logado','Faça o login antes de entrar',3000);
+		}
+		if (localStorage.getItem('entitie')) {debugger
+			$scope.entitie = localStorage.getItem('entitie');
+			console.log($scope.entitie);
+			$state.go('entitie');
+		}else{
+
 		}
 	}
 

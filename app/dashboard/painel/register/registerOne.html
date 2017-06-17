@@ -1,36 +1,40 @@
-<div class="col-md-12" ng-if="statusView == 'registerOne'">
-	<input class="input-lg" type="text" placeholder="Digite seu CEP" name="cep"
-		ng-model="cad.cep">
-	<span class="fa fa-search" id="search"
-		ng-click="getCep(cad.cep)">
-	</span>
-</div>
-<div class="col-md-12" ng-if="statusView == 'registerTwo'">
-	<input class="input-lg" type="text" name="street" id="street"
-		ng-model="cad.logradouro"
-		ng-maxlength="100"
-		ng-required="true">
-	<input class="input-lg" type="text" name="number" id="number"
-		ng-model="cad.number"
-		ng-maxlength="8"
-		ng-required="true">
-		{{cad}}
-	<button class="btn btn-primary btn-lg"
-		ng-click="nextStepRegister()">
-		Próximo
-	</button>
-</div>
-<div class="col-md-12" ng-if="statusView == 'registerThree'">
-	<input class="input-lg" type="text" placeholder="Nome da ONG" name="nameOng" id="nameOng"
-		ng-model="cad.nameOng"
-		ng-maxlength="100"
-		ng-required="true">
-	<input class="input-lg" type="text" placeholder="Área de atuação" name="acting" id="acting"
-		ng-model="cad.acting"
-		ng-maxlength="8"
-		ng-required="true">
-	<button class="btn btn-primary btn-lg"
-		ng-click="setFullRegister(cad)">
-		Confirmar Endereço
-	</button>
+<div >
+	<div class="col-md-12" ng-if="statusView == 'registerOne'">
+		<input class="input-lg" type="text" placeholder="Digite seu CEP" name="cep"
+			ng-model="cad.cep">
+		<span class="fa fa-search" id="search"
+			ng-click="getCep(cad.cep)">
+		</span>
+	</div>
+	<div class="col-md-12" ng-if="statusView == 'registerTwo'">
+		<input class="input-lg" type="text" name="street" id="street"
+			ng-model="cad.logradouro"
+			ng-show="cad.logradouro"
+			ng-maxlength="100"
+			ng-required="true">
+		<input class="input-lg" type="text" name="number" id="number" placeholder="Nº"
+			ng-model="cad.numero"
+			ng-maxlength="8"
+			ng-required="true">
+			{{cad}}
+		<button class="btn btn-primary btn-lg"
+			ng-click="nextStepRegister()">
+				Próximo
+		</button>
+	</div>
+	<div class="col-md-12" ng-if="statusView == 'registerThree'">
+		<input class="input-lg" type="text" placeholder="Nome da ONG" name="nameOng" id="nameOng"
+			ng-model="cad.nameOng"
+			ng-maxlength="100"
+			ng-required="true">
+		<input class="input-lg" type="text" placeholder="Área de atuação" name="acting" id="acting"
+			ng-model="cad.acting"
+			ng-maxlength="8"
+			ng-required="true">
+		<button class="btn btn-primary btn-lg"
+			ng-click="setFullRegister(cad)">
+			Confirmar Endereço
+		</button>
+	</div>
+
 </div>

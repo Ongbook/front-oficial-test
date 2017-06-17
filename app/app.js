@@ -12,6 +12,7 @@
 		'ngAnimate',
 		'ngMessages',
 		'toaster',
+		'ngMap',
 		'ui.bootstrap',
 		'fullPage.js',
 		'ongbook.controllers',
@@ -20,5 +21,6 @@
 		'ongbook.component',
 		'ongbook.interceptors'
     ]);
+
 
 })();

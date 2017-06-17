@@ -44,7 +44,7 @@
 		};
 		var _setFullAddress =	function (address) {
 			localStorage.removeItem('address');
-			localStorage.setItem('address',address);
+			localStorage.setItem('entitie',address);
 			return true;
 		};
 
