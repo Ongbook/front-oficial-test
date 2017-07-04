@@ -15,46 +15,44 @@
 		$scope.statusView = 'registerOne';
 		$scope.getCep = getCep;
 		$scope.nextStepRegister = nextStepRegister;
-		$scope.setFullAddress = setFullAddress;
 		$scope.setFullRegister = setFullRegister;
 		$scope.cad = {};
+		$scope.address = {};
 
-		function getCep(cep) {
-			entitiesServiceApi.getCep(cep,'json')
+		function getCep( address ) {
+			entitiesServiceApi.getCep( address ,'json')
 				.then(function (res) {
-					$scope.cad = res.data;
-					console.log($scope.cad);
-					entitiesServiceApi.setEntitie(JSON.stringify(res.data));
+					$scope.address = res.data;
 					$scope.statusView = 'registerTwo';
 				});
 		}
 
 		function nextStepRegister () {
-			console.log($scope.cad);
 			if ($scope.statusView === 'registerTwo') {
 				setTimeout(function () {
 					$scope.statusView = 'registerThree';
 				},300);
 			}
 		}
-
-		function setFullAddress(cad) {
-			var _entitie = { "nameOng": cad.nameOng, "acting":cad.acting };
-			entitiesServiceApi.setEntitieFullRegister(JSON.stringify(_entitie));
-			var _address = JSON.parse(entitiesServiceApi.getAddress());
-			_address.street = $scope.cad.street;
-			_address.number = $scope.cad.number;
-			var _completeRegister = entitiesServiceApi.setFullAddress(JSON.stringify(_address));
-			$state.go('painel');
-		}
-		function setFullRegister(cad) {
-			entitiesServiceApi.setFullAddress(JSON.stringify(cad));
-			$state.go('painel');
+		function setFullRegister( cad, address ) {
+			var _registerFull = {
+				address: address,
+				name: cad.name,
+				areaServed: cad.areaServed,
+				location: null
+			};
+			var _token = localStorage.getItem('jwt');
+			entitiesServiceApi.setFullRegister( _registerFull, _token )
+				.then(function ( res ) {
+					$scope.cad = angular.copy( res.data );
+					console.log( $scope.cad );
+					$state.go('painel');
+				});
 		}
 
 		function logout() {
 			localStorage.clear();
-			$state.go('home');
+			$state.go('institutional');
 		}
 
 		function showError(val) {
@@ -67,7 +65,6 @@
 		}
 		if (localStorage.getItem('entitie')) {debugger
 			$scope.entitie = localStorage.getItem('entitie');
-			console.log($scope.entitie);
 			$state.go('entitie');
 		}else{
 

@@ -33,8 +33,12 @@
 			return $http.get(config.cep+cep+'/'+type);
 		};
 
-		var _setEntitie = function (cep) {
-			localStorage.setItem('address',cep);
+		var _setEntitie = function ( address ) {
+			// return $http.post( config.apiUrl + 'ngos/', entitie)
+			// 	.then(function ( res ) {
+			// 		console.log(res.data);
+			// 	});
+			localStorage.setItem('address', address );
 		};
 
 		var _getAddress = function () {
@@ -58,11 +62,27 @@
 		var _getEntitieFullRegister = function (entitie) {
 			return localStorage.getItem('entitie');
 		};
+		var _getEntitie = function (entitie) {
+			return $http.get(config.apiUrl+'ngos/',entitie)
+				.then(function ( res ) {
+					console.log( res.data );
+				});
+		};
+
+		var _setFullRegister = function ( register, token ) {
+			$http.defaults.headers.common['Authorization'] = token;
+
+			return $http.post( config.apiUrl + 'ngos/', register,
+						 {headers:{'Content-Type': 'application/json'}})
+			.then( function ( res ) {
+					return res.data;
+				} );
+		};
 
 		return {
 			setFullAddress:_setFullAddress,
 			getAddress:_getAddress,
-			setEntitie:_setEntitie,
+			// setEntitie:_setEntitie,
 			getCep:_getCep,
 			getEntities:_getEntities,
 			setEntities:_setEntities,
@@ -70,7 +90,10 @@
 			registerEntitie:_registerEntitie,
 			isLogged:_isLogged,
 			setEntitieFullRegister:_setEntitieFullRegister,
-			getEntitieFullRegister:_getEntitieFullRegister
+			getEntitieFullRegister:_getEntitieFullRegister,
+			getEntitie:_getEntitie,
+			setEntitie:_setEntitie,
+			setFullRegister:_setFullRegister
 		};
 	}
 })();
