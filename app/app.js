@@ -15,6 +15,7 @@
 		'ngMap',
 		'ui.bootstrap',
 		'fullPage.js',
+		'satellizer',
 		'ongbook.controllers',
 		'ongbook.services',
 		'ongbook.directives',
