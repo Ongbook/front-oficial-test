@@ -24,7 +24,7 @@
 					</li>
 					<li class="divider"></li>
 					<li
-					  ng-click="vm.logout()"><a href><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+					  ng-click="logout()"><a href><i class="fa fa-sign-out fa-fw"></i> Logout</a>
 					</li>
 				</ul>
 				<!-- /.dropdown-user -->
@@ -36,14 +36,14 @@
 		<div class="navbar-default sidebar" role="navigation">
 			<div class="sidebar-nav navbar-collapse">
 				<ul class="nav" id="side-menu">
-					<li>
+					<li ng-show="entitie">
 						<a ui-sref="painel" href><i class="fa fa-dashboard fa-fw"></i> Painel</a>
 					</li>
-					<li>
+					<li ng-show="entitie">
 						<a ui-sref="entitie" href><i class="fa fa-user-o"></i> Entidade</a>
 					</li>
-					<li>
-						<a ui-sref="necessity" href><i class="fa fa-user-o"></i> Necessidades</a>
+					<li ng-show="entitie">
+						<a ui-sref="necessity" href><i class="fa fa-heartbeat" aria-hidden="true"></i>Necessidades</a>
 					</li>
 				</ul>
 			</div>

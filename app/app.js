@@ -12,13 +12,16 @@
 		'ngAnimate',
 		'ngMessages',
 		'toaster',
+		'ngMap',
 		'ui.bootstrap',
 		'fullPage.js',
+		'satellizer',
 		'ongbook.controllers',
 		'ongbook.services',
 		'ongbook.directives',
 		'ongbook.component',
 		'ongbook.interceptors'
     ]);
+
 
 })();

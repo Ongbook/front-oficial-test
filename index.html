@@ -2,63 +2,72 @@
 <html lang="pt-br" ng-app="ongbook">
 
 <head>
-  <meta charset="utf-8">
-  <base href="/">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
-  <meta name="author" content="">
+	<meta charset="utf-8">
+	<base href="/">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
 
-  <title>Ongbook</title>
-  <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/css/sb-admin-2.css">
-  <link rel="stylesheet" href="lib/AngularJS-Toaster/toaster.min.css">
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/font-awesome.css"/>
-  <link rel="stylesheet" href="lib/fullpage.js/jquery.fullPage.css">
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6MHUMDM2dDcyv29x9Bfk90lDJLtfGSKM" async></script>
+	<title>Ongbook</title>
+	<link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/sb-admin-2.css">
+	<link rel="stylesheet" href="lib/AngularJS-Toaster/toaster.min.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="assets/css/font-awesome.css"/>
+	<link rel="stylesheet" href="lib/fullpage.js/jquery.fullPage.css">
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6MHUMDM2dDcyv29x9Bfk90lDJLtfGSKM" async></script>
 
 </head>
 
 <body>
-  <toaster-container></toaster-container>
-  <div ui-view></div>
+	<toaster-container></toaster-container>
+	<div ui-view></div>
 
-  <script src="lib/jquery/dist/jquery.min.js"></script>
-  <script src="lib/angular/angular.min.js"></script>
-  <script src="lib/bootstrap/dist/js/bootstrap.js"></script>
+	<script src="lib/jquery/dist/jquery.min.js"></script>
+	<script src="lib/angular/angular.min.js"></script>
+	<script src="lib/bootstrap/dist/js/bootstrap.js"></script>
 
-  <script src="assets/js/sb-admin-2.js"></script>
-  <script src="lib/angular-ui-router/release/angular-ui-router.js"></script>
-  <script src="lib/angular-bootstrap/ui-bootstrap.js"></script>
-  <script src="lib/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
-  <script src="lib/angular-messages/angular-messages.js"></script>
-  <script src="lib/angular-animate/angular-animate.min.js"></script>
-  <script src="lib/AngularJS-Toaster/toaster.min.js"></script>
-  <script src="lib/fullpage.js/vendors/jquery.slimscroll.min.js"></script>
-  <script src="lib/fullpage.js/dist/jquery.fullpage.min.js"></script>
-  <script src="lib/angular-fullpage.js/angular-fullpage.min.js"></script>
+	<script src="assets/js/sb-admin-2.js"></script>
+	<script src="lib/angular-ui-router/release/angular-ui-router.js"></script>
+	<script src="lib/angular-bootstrap/ui-bootstrap.js"></script>
+	<script src="lib/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+	<script src="lib/satellizer/dist/satellizer.min.js"></script>
+	<script src="lib/angular-messages/angular-messages.js"></script>
+	<script src="lib/angular-animate/angular-animate.min.js"></script>
+	<script src="lib/AngularJS-Toaster/toaster.min.js"></script>
+	<script src="lib/fullpage.js/vendors/jquery.slimscroll.min.js"></script>
+	<script src="lib/fullpage.js/dist/jquery.fullpage.min.js"></script>
+	<script src="lib/angular-fullpage.js/angular-fullpage.min.js"></script>
+	<script src="lib/ngmap/build/scripts/ng-map.min.js"></script>
 
 
-  <script src="app/app.js"></script>
-  <script src="app/routes.js"></script>
 
-  <script src="app/institutional/institutionalController.js"></script>
-  <script src="app/institutional/login/loginController.js"></script>
-  <script src="app/dashboard/dashboardController.js"></script>
-  <script src="app/dashboard/painel/entitie/entitieController.js"></script>
-  <script src="app/dashboard/painel/entitie/entitiesServiceApi.js"></script>
-  <script src="app/dashboard/painel/painelController.js"></script>
-  <script src="app/dashboard/painel/necessity/necessityController.js"></script>
-  <script src="app/dashboard/painel/necessity/necessityServiceApi.js"></script>
+	<script src="app/app.js"></script>
+	<script src="app/routes.js"></script>
 
-  <script src="app/institutional/register/registerServiceApi.js"></script>
+	<script src="app/institutional/institutionalController.js"></script>
+	<script src="app/institutional/login/loginController.js"></script>
+	<script src="app/dashboard/dashboardController.js"></script>
+	<script src="app/dashboard/painel/entitie/entitieController.js"></script>
+	<script src="app/dashboard/painel/entitie/entitiesServiceApi.js"></script>
+	<script src="app/dashboard/painel/painelController.js"></script>
+	<script src="app/dashboard/painel/necessity/necessityController.js"></script>
+	<script src="app/dashboard/painel/necessity/necessityServiceApi.js"></script>
 
-  <script src="app/institutional/login/loginServiceApi.js"></script>
-  <script src="app/dashboard/navbarDashboard.component.js"></script>
-  <script src="app/interceptors/errorInterceptor.js"></script>
-  <script src="app/value/interceptorsConfig.js"></script>
-  <script src="app/value/config.js"></script>
+	<script src="app/institutional/register/registerServiceApi.js"></script>
+	<script src="app/institutional/login/sessionControlService.js"></script>
+	<script src="app/institutional/login/loginAPIService.js"></script>
+	<script src="app/institutional/login/authUserService.js"></script>
+
+
+
+	<script src="app/institutional/login/loginServiceApi.js"></script>
+	<script src="app/dashboard/navbarDashboard.component.js"></script>
+	<script src="app/interceptors/errorInterceptor.js"></script>
+	<script src="app/interceptors/tokenInterceptor.js"></script>
+	<script src="app/value/interceptorsConfig.js"></script>
+	<script src="app/value/config.js"></script>
 
 </body>
 

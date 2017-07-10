@@ -8,5 +8,6 @@
 
 		function config ($httpProvider) {
 			$httpProvider.interceptors.push("errorInterceptor");
+			$httpProvider.interceptors.push("tokenInterceptor");
 		}
 })();
