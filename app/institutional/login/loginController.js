@@ -5,9 +5,9 @@
 	.module('ongbook.controllers')
 	.controller('loginController', loginController);
 
-	loginController.$inject = ['loginAPIService','$state','toaster'];
+	loginController.$inject = ['loginAPIService','$location','toaster'];
 
-	function loginController(loginAPIService,$state,toaster) {
+	function loginController(loginAPIService,$location,toaster) {
 		var vm = this;
 		vm.auth = auth;
 		vm.showError = showError;
@@ -20,11 +20,9 @@
 		function auth (objParam) {
 			if (objParam) {
 				loginAPIService.login(objParam)
- 					.then(function (response) {
- 						console.log(response);
- 						if(response.status == '200'){
- 							localStorage.setItem('jwt',response.data.jwt);
-		 					$state.go('dashboard');
+ 					.then(function (res) {
+ 						if(res === 200){
+		 					$location.path('/painel');
  						}
  					});
 			}

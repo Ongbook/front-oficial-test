@@ -8,8 +8,8 @@
 
 	function entitiesServiceApi($http,config) {
 
-		var _getEntities = function () {
-			return $http.get(config.apiUrl+'entidades');
+		var _getEntities = function (ngo) {
+			return $http.get(config.apiUrl+'ngos/'+ngo);
 		};
 
 		var _setEntities = function (objParam) {

@@ -672,11 +672,21 @@ form,fieldset,input,textarea,p,blockquote,th,td {
   height: 250%;
 }
 
+body {
+  font-size :16px  ;
+}
+/*
+.nav-links {
+  padding-left: 10px;
+}*/
 
-
-
-
-
+#header-painel {
+  padding-top: 50px;
+}
+/*
+#side-menu {
+  padding-top: 10px;
+}*/
 
 
 

@@ -7,7 +7,7 @@
 
 		function authUserService($auth, $state, sessionControlService, $http) {
 
-			var cacheSession = function(email, username, avatar) {
+			var cacheSession = function(email, username) {
 				sessionControlService.setUser('userIsLogin', true);
 				sessionControlService.setUser('email', email);
 				sessionControlService.setUser('username', username);
@@ -22,6 +22,7 @@
 			};
 
 			var _getToken =  function () {
+				console.log(sessionControlService.getItem('token'));
 				return sessionControlService.getItem('token');
 			};
 

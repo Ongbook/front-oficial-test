@@ -3,8 +3,10 @@
 
 	angular
 		.module('ongbook')
-		.config(['$locationProvider','$urlRouterProvider','$stateProvider','$authProvider',
-		function($locationProvider, $urlRouterProvider, $stateProvider, $authProvider){
+		.config(['$locationProvider','$urlRouterProvider','$stateProvider','$authProvider','$qProvider',
+		function($locationProvider, $urlRouterProvider, $stateProvider, $authProvider, $qProvider){
+			// ui router bug
+			$qProvider.errorOnUnhandledRejections(false);
 			$locationProvider.html5Mode(true);
 			$authProvider.loginUrl = "https://ongbook-api-strapi-dev.herokuapp.com/auth/local";
 			$stateProvider
@@ -39,7 +41,7 @@
 	     		}
 	     	})
 	     	.state('necessity',{
-	     		url: '/dashboard/necessity',
+	     		url: '/necessity',
 	     		views: {
 	     			'':{
 	     				templateUrl: '../app/dashboard/painel/necessity/necessity.html', controller: 'necessityController'

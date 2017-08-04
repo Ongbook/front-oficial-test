@@ -15,7 +15,6 @@
 				.then(function (result) {
 					if (result.status === 200){
 						localStorage.setItem('token', result.data.jwt);
-						console.log(result);
 					} else {
 						localStorage.removeItem('token');
 					}

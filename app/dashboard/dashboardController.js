@@ -5,9 +5,9 @@
 	.module('ongbook.controllers')
 	.controller('dashboardController', dashboardController);
 
-	dashboardController.$inject = ['entitiesServiceApi','loginServiceApi','$state','toaster','$scope'];
+	dashboardController.$inject = ['entitiesServiceApi','loginServiceApi','$state','toaster','$scope','$timeout'];
 
-	function dashboardController(entitiesServiceApi,loginServiceApi,$state,toaster,$scope) {
+	function dashboardController(entitiesServiceApi,loginServiceApi,$state,toaster,$scope,$timeout) {
 
 		$scope.showError = showError;
 		$scope.error = false;
@@ -19,7 +19,7 @@
 		$scope.cad = {};
 		$scope.address = {};
 
-		function getCep( address ) {
+		function getCep( address ) {debugger;
 			entitiesServiceApi.getCep( address ,'json')
 				.then(function (res) {
 					$scope.address = res.data;
@@ -45,7 +45,7 @@
 			entitiesServiceApi.setFullRegister( _registerFull, _token )
 				.then(function ( res ) {
 					$scope.cad = angular.copy( res.data );
-					console.log( $scope.cad );
+					console.log( res.data );
 					$state.go('painel');
 				});
 		}
@@ -59,16 +59,16 @@
 			$scope.error = val;
 		}
 
-		if (!entitiesServiceApi.isLogged()){
-			$state.go('home');
-			toaster.pop('error','Usuário não logado','Faça o login antes de entrar',3000);
-		}
-		if (localStorage.getItem('entitie')) {debugger
-			$scope.entitie = localStorage.getItem('entitie');
-			$state.go('entitie');
-		}else{
+		// if (!entitiesServiceApi.isLogged()){
+		// 	$state.go('login');
+		// 	// toaster.pop('error','Usuário não logado','Faça o login antes de entrar',3000);
+		// }
+		// if (localStorage.getItem('entitie')) {debugger
+		// 	$scope.entitie = localStorage.getItem('entitie');
+		// 	$state.go('entitie');
+		// }else{
 
-		}
+		// }
 	}
 
 })();

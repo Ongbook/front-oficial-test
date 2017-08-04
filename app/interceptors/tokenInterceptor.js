@@ -43,6 +43,15 @@
                     config.headers['Authorization'] = $injector.get('authUserService').getToken();
                 }
             }
+            if(!$injector.get('authUserService').isLoggedIn() &&
+            	($location.$$path === '/dashboard' || $location.$$path === '/painel' || $location.$$path === '/entitie' || $location.$$path === '/necessity')){
+            	console.log($injector.get('authUserService').isLoggedIn());
+            	// event.preventDefault();
+              // $toaster.pop('warning', "Login", "É necessário estar logado para acessar essa requisição.");
+              $location.path('/login');
+            }else{
+
+            }
 
               return config;
         },
@@ -50,7 +59,7 @@
             if(response.status === 405)
             {
               $injector.get('sessionControlService').removeItem('token');
-              $location.path('/');
+              $location.path('/login');
             }
             return $q.reject(response);
         }
