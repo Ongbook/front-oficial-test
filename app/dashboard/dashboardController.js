@@ -47,6 +47,7 @@
 					$scope.cad = angular.copy( res.data );
 					console.log( res.data );
 					$state.go('painel');
+					toaster.pop('success','Sucesso','Sua entidade foi cadastrada',4000);
 				});
 		}
 
