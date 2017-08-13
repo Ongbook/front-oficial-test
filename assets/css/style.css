@@ -404,6 +404,11 @@ form,fieldset,input,textarea,p,blockquote,th,td {
   line-height: 1.8;
 }
 
+#section1 a{
+  text-decoration: none;
+  color: white;
+}
+
 #section1 #bq-drucker {
   margin-right: 16px;
   margin-top: 16px;
@@ -413,6 +418,7 @@ form,fieldset,input,textarea,p,blockquote,th,td {
 
 #section1 #bq-drucker h5{
   line-height: 2.5;
+  color: #f19c14;
 }
 
 #section1 .fa-play-circle-o {
@@ -570,6 +576,10 @@ i.fa-1x{
 
 i.fa-1x:hover{
   color: #f19c14;
+}
+
+#logo-bottom{
+  height: 40px;
 }
 /* End #section5 - contact footer ****************************************/
 
