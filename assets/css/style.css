@@ -111,7 +111,7 @@ form,fieldset,input,textarea,p,blockquote,th,td {
 /* nav-bar-home-institutional *************************************/
 #institutional-navbar {
   background-color: #43607d;
-  border-color: #2d4052;
+  border: none;
 }
 #institutional-navbar .navbar-brand {
   color: #f7fbff;
@@ -143,7 +143,7 @@ form,fieldset,input,textarea,p,blockquote,th,td {
   background-color: #2d4052;
 }
 #institutional-navbar .navbar-toggle {
-  border-color: #2d4052;
+  border: none;
 }
 #institutional-navbar .navbar-toggle:hover,
 #institutional-navbar .navbar-toggle:focus {
@@ -154,7 +154,7 @@ form,fieldset,input,textarea,p,blockquote,th,td {
 }
 #institutional-navbar .navbar-collapse,
 #institutional-navbar .navbar-form {
-  border-color: #f7fbff;
+  border: none;
 }
 #institutional-navbar .navbar-link {
   color: #f7fbff;
@@ -188,7 +188,13 @@ form,fieldset,input,textarea,p,blockquote,th,td {
   font-size: 22px;
   font-weight: bold;
   color: #f19c14 !important;
-  padding-left: 0px !important;
+  padding-left: 16px;
+}
+
+@media (max-width: 767px){
+  #ongbook-title{
+    padding-left: 0px;
+  }
 }
 
 .navbar-login
@@ -580,6 +586,20 @@ i.fa-1x:hover{
 
 #logo-bottom{
   height: 40px;
+}
+
+@media (max-width: 991px){
+
+  #logo-bottom{
+    margin: 8px auto;
+    display: block;
+  }
+
+  .footer-top p {
+    text-align: center;
+    font-size: 12px;
+  }
+
 }
 /* End #section5 - contact footer ****************************************/
 
