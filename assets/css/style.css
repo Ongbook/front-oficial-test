@@ -5,7 +5,6 @@ form,fieldset,input,textarea,p,blockquote,th,td {
   margin: 0;
 }
 
-
 .input-invalid {
   border-color: red;
 }
@@ -180,8 +179,16 @@ form,fieldset,input,textarea,p,blockquote,th,td {
 }
 
 .navbar-brand img{
-  margin-top: -14px;
-  height: 62px;
+  margin-top: -11px;
+  height: 56px;
+}
+
+#ongbook-title{
+  font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+  font-size: 22px;
+  font-weight: bold;
+  color: #f19c14 !important;
+  padding-left: 0px !important;
 }
 
 .navbar-login
@@ -252,6 +259,16 @@ form,fieldset,input,textarea,p,blockquote,th,td {
 
 
 /* #section0 - maps ***********************************************/
+#section0 #map-container{
+  height:100%;
+}
+
+#section0 ng-map {
+  width: 100%;
+  height:100%;
+  position: absolute;
+}
+
 #section0 .over-map {
   position: absolute;
   width: 100%;
@@ -264,7 +281,7 @@ form,fieldset,input,textarea,p,blockquote,th,td {
   padding-bottom: 100px;
   z-index: 10;
   text-shadow: 2px 2px 10px black;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.3);
 }
 
 #section0 .over-map .container {
@@ -299,9 +316,21 @@ form,fieldset,input,textarea,p,blockquote,th,td {
 }
 
 #btn-know-now {
+  margin-top: 20px;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
+  color: wheat;
+  font-size: large;
+  background-color: #2c3e50;
+  border-color: #2c3e50;
+  padding: 12px 30px;
+}
+
+#btn-know-now:hover{
+  color: wheat;
+  background-color: #1a242f;
+  border-color: #161f29;
 }
 /* End #section0 - maps ******************************************/
 
@@ -441,10 +470,25 @@ form,fieldset,input,textarea,p,blockquote,th,td {
   margin-right: auto;
   width: 60%;
 }
+
+#img-modal-support{
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+#blockquote-support{
+  padding: 10px 20px;
+  margin: 0 0 20px;
+  font-size: 17.5px;
+}
+
+#blockquote-support p{
+  margin: 0 0 10px;
+}
 /* End #section3 - support *****************************************/
 
 
-/* End #section4 - partners ****************************************/
+/* #section4 - partners ****************************************/
 #section4 {
   background-color: lightblue;
 }
@@ -471,11 +515,11 @@ form,fieldset,input,textarea,p,blockquote,th,td {
   text-align: center;
 }
 
-#section4 .panel-parceiros {
+#section4 .panel-partners {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-#section4 .panel-parceiros .logo-parceiros {
+#section4 .panel-partners .logo-partners {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -492,7 +536,7 @@ form,fieldset,input,textarea,p,blockquote,th,td {
 /* End #section4 - partners ****************************************/
 
 
-/* #section5 - footer **********************************************/
+/* #section5 - contact footer **********************************************/
 .footer-top {
   background-color: #16222d;
   padding-top: 20px;
@@ -500,48 +544,34 @@ form,fieldset,input,textarea,p,blockquote,th,td {
   text-align: left;
 }
 
-.footer-top i {
-  background-color: #33383b;
-  color: #ffffff;
-  font-size: 25px;
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 42px;
-  margin: 10px 15px;
-  vertical-align: middle;
-}
-
-.footer-top i.fa-envelope {
-  font-size: 17px;
-  line-height: 38px;
-}
-
 .footer-top p {
-  display: inline-block;
-  color: #ffffff;
-  vertical-align: middle;
-  margin: 0;
+  color: #f19c14;
+  font-size: small;
 }
 
-.footer-top p span {
-  display: block;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 2;
-}
 
 .footer-top p a {
-  color: #5383d3;
+  color: white;
   text-decoration: none;
 }
 
-.footer-top .fmap {
-  margin-top: 70px;
+footer nav{
+  margin-top: 8px;
+  text-align: center;
 }
-/* End #section5 - footer ****************************************/
 
+footer nav :not(:first-child){
+  margin-left: 20px;
+}
+
+i.fa-1x{
+  color: white;
+}
+
+i.fa-1x:hover{
+  color: #f19c14;
+}
+/* End #section5 - contact footer ****************************************/
 
 /* login page ****************************************************/
 #background-login {
@@ -571,14 +601,10 @@ form,fieldset,input,textarea,p,blockquote,th,td {
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
 }
 
-.profile-img-card {
-  width: 96px;
-  height: 96px;
-  margin: 0 auto 10px;
+#profile-img-card {
+  width: 70px;
+  margin: 0 auto;
   display: block;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
 }
 
 /* Form styles */
@@ -669,82 +695,5 @@ form,fieldset,input,textarea,p,blockquote,th,td {
 /* End login page **********************************************/
 
 #logo-dashboard {
-  height: 250%;
+  height: 220%;
 }
-
-
-
-
-
-
-
-
-
-/*
-body{
-  background-image: url('../img/bg.jpg');
-  background-size:cover;
-}
-
-header{
-  margin: 0px;
-  padding: 0px;
-}
-app-header{
-  margin: 0px;
-  padding: 0px;
-}
-
-
-.content{
-  margin-top: 100px;
-  margin-bottom:100px;
-}
-
-.rounded{
-  background-color: white;
-  border-radius: 5px;
-  padding: 8px;
-  -webkit-box-shadow: 0px 0px 15px 1px rgba(0,0,0,0.25);
-  -moz-box-shadow: 0px 0px 15px 1px rgba(0,0,0,0.25);
-  box-shadow: 0px 0px 15px 1px rgba(0,0,0,0.25);
-}
-
-.sidebarBtn{
-  text-align:center;
-  padding:10px;
-}
-.sidebarBtn .fa{
-  font-size: 2.5em;
-  margin: 10px;
-}
-.sidebar{
-  font-weight: 600;
-}
-.sidebar a{
-  color: #9C9C9C;
-}
-.sidebar a:hover{
-  text-decoration: none;
-  color: #43607d;
-  text-shadow: 0px 0px 6px rgba(0,0,0,0.25);
-}
-
-.img-modal-apoie {
-  width: 100%;
-  margin-bottom: 20px;
-}
-
-#like-box-face {
-  width: 100%;
-  height: 214px;
-  margin: 0 auto;
-  border: none;
-  overflow: hidden;
-}
-
-#content-modal {
-  height: 230px;
-}
-
-*/

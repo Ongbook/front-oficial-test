@@ -8,19 +8,19 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" data-menuanchor="mapa" href="#mapa">
+                <a class="navbar-brand" data-menuanchor="map" href="#map">
                     <img src="assets/img/logo.png" alt="logo ongbook" />
                 </a>
             </div>
             <div id="navbar" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li data-menuanchor="parceiros"><a id="title-ongbook" href="#parceiros">Ongbook</a></li>
-                    <li data-menuanchor="responsavelporumaong"><a href="#responsavelporumaong">Atua em alguma ONG?</a></li>
+                    <li data-menuanchor="partners"><a id="ongbook-title" href="#partners">Ongbook</a></li>
+                    <li data-menuanchor="ngo-owner"><a href="#ngo-owner">Atua em alguma ONG?</a></li>
                 </ul>
 
                 <ul class="nav navbar-nav navbar-right">
-                    <li data-menuanchor="queremosefazemos"><a href="#queremosefazemos">O que</a></li>
-                    <li data-menuanchor="apoie"><a href="#apoie">Apoie</a></li>
+                    <li data-menuanchor="whant-and-make"><a href="#whant-and-make">O que</a></li>
+                    <li data-menuanchor="support"><a href="#support">Apoie</a></li>
                     <li class="dropdown">
                         <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">
                             <div>
@@ -39,10 +39,7 @@
                                         <span class="text-center">OU</span>
                                         <div class="form-group">
                                             <a href="login">
-                                              <button type="submit" class="btn btn-primary btn-block"
-                                              ng-click="">
-                                                Entrar
-                                              </button>
+                                                <button type="submit" class="btn btn-primary btn-block" ng-click="">Entrar</button>
                                             </a>
                                         </div>
                                     </div>
@@ -59,226 +56,215 @@
     </nav>
 </header>
 
-<div>
-    <div full-page options="vm.mainOptions">
-        <section class="section" id="section0">
-            <div id="map-container">
-                <ng-map center="[-14.18650192, -51.89766873]" zoom="4" default-style="false"></ng-map>
-                <div class="over-map" id="over-map">
-                    <div class="container">
-                        <h1>
-                            Entidades Sociais a sua volta
-                        </h1>
-                        <button id="btn-know-now" class="btn btn-default" ng-click="vm.error()">
-                            Conheça agora
-                        </button>
-                    </div>
+<div full-page options="vm.mainOptions">
+    <section class="section" id="section0">
+        <div id="map-container">
+            <ng-map center="[-14.18650192, -51.89766873]" zoom="4" default-style="false"></ng-map>
+            <div class="over-map" id="over-map">
+                <div class="container">
+                    <h1>
+                        Entidades Sociais a sua volta
+                    </h1>
+                    <button id="btn-know-now" class="btn btn-default" ng-click="vm.error()">
+                        Conheça agora
+                    </button>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="section" id="section1">
-            <video id="video-background" loop muted controls="false" autoplay>
-                <source src="http://ongbookprototipo.hol.es/view/videos/nascer-sol.mp4" type="video/mp4">
-                <source src="http://ongbookprototipo.hol.es/view/videos/nascer-sol.ogg" type="video/ogg">
-            </video>
-            <div id="layer-over-video">
-                <div class="container">
-                    <h1>Queremos e fazemos</h1>
-                    <h4>Catálogo de Entidades Sociais e suas necessidades.<br>Todas engajadas em prol dos <a href="https://nacoesunidas.org/pos2015/agenda2030/" target="_blank">Objetivos de Desenvolvimento Sustentável</a>.</h4>
-                    <div class="rows">
+    <section class="section" id="section1">
+        <video id="video-background" loop muted controls="false" autoplay>
+            <source src="http://ongbookprototipo.hol.es/view/videos/nascer-sol.mp4" type="video/mp4" />
+            <source src="http://ongbookprototipo.hol.es/view/videos/nascer-sol.ogg" type="video/ogg" />
+        </video>
+        <div id="layer-over-video">
+            <div class="container">
+                <h1>Queremos e fazemos</h1>
+                <h4>Catálogo de Entidades Sociais e suas necessidades.<br>Todas engajadas em prol dos <a href="https://nacoesunidas.org/pos2015/agenda2030/" target="_blank">Objetivos de Desenvolvimento Sustentável</a>.</h4>
+                <div class="rows">
+                    <div class="col-md-6">
                         <h2>Metas</h2>
-                        <div class="col-md-12">
-                            <div class="panel panel-default panel-bg-video">
-                                <div class="panel-body panel-queremos">
-                                    <!-- <h3>Para as Entidades Sociais</h3> -->
-                                    <ul>
-                                        <li>Gerir suas <strong>necessidades</strong>: (postar, manter e dar feedback dos resultados)
-                                            <ul>
-                                                <li>De trabalho voluntário;</li>
-                                                <li>De um determinado material;</li>
-                                                <li>Ou de recursos <strong>$</strong>, para comprar o material.</li>
-                                            </ul>
-                                        </li>
-                                        <li>Dar visibilidade aos seus projetos</li>
-                                        <li>Manter a população informada de suas atividade diárias</li>
-                                    </ul>
-                                </div>
+                        <div class="panel panel-default panel-bg-video">
+                            <div class="panel-body panel-queremos">
+                                <ul>
+                                    <li>Gerir suas <strong>necessidades</strong>: (postar, manter e dar feedback dos resultados)
+                                        <ul>
+                                            <li>De trabalho voluntário;</li>
+                                            <li>De um determinado material;</li>
+                                            <li>Ou de recursos <strong>$</strong>, para comprar o material.</li>
+                                        </ul>
+                                    </li>
+                                    <li>Dar visibilidade aos seus projetos</li>
+                                    <li>Manter a população informada de suas atividade diárias</li>
+                                </ul>
                             </div>
                         </div>
+                    </div>
 
-                        <!-- <div class="col-md-6">
-                            <div class="panel panel-default panel-bg-video">
-                                <div class="panel-body panel-queremos">
-                                    <h3>Para as pessoas com o perfil Solidário</h3>
-                                    <ul>
-                                        <li>Informações categorizadas de atividades sociais</li>
-                                        <li>Oportunidade de exercer atividades filantrópicas, exercer a cidadania</li>
-                                        <li>Receber notificações de atividades sociais com o seu perfil</li>
-                                        <li>Contribuir para melhoria da aplicação, caso seja desenvolvedor</li>
-                                    </ul>
-                                </div>
+                    <div class="col-md-6">
+                        <h2>Métricas</h2>
+                        <div class="panel panel-default panel-bg-video">
+                            <div class="panel-body panel-queremos">
+                                <!-- Dados - quantidade de Entidades cadastradas -->
                             </div>
-                        </div> -->
+                        </div>
+                    </div>
 
-                        <blockquote id="bq-drucker" class="pull-right">
-                            <h5>"O que conta não é o quanto você tem, e sim, o quanto você contribui".</h5>
-                            <small>Peter Drucker em <cite title="Drucker Institute"><a href="http://www.druckerinstitute.com/drucker-nonprofit-innovation-award/" target="_blank">NONPROFIT</a></cite>. <a href="http://migre.me/mRmc2" target="_blank">Slide</a></small>
-                        </blockquote>
-                        <i class="fa fa-play-circle-o fa-5x" aria-hidden="true"></i>
+                    <blockquote id="bq-drucker" class="pull-right">
+                        <h5>"O que conta não é o quanto você tem, e sim, o quanto você contribui".</h5>
+                        <small>Peter Drucker em <cite title="Drucker Institute"><a href="http://www.druckerinstitute.com/drucker-nonprofit-innovation-award/" target="_blank">NONPROFIT</a></cite>. <a href="http://migre.me/mRmc2" target="_blank">Slide</a></small>
+                    </blockquote>
+                    <i class="fa fa-play-circle-o fa-5x" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="section2">
+        <div class="container">
+            <h1>Atua em alguma instituição social?</h1>
+            <div class="col-md-6">
+                <div class="panel panel-dafault" style="min-height: 278px;">
+                    <div class="pane-body">
+                        <h2>Slides...</h2>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <section class="section" id="section2">
-            <div class="container">
-                <h1>Atua em alguma instituição social?</h1>
-                <div class="col-md-6">
-                    <div class="panel panel-dafault" style="min-height: 278px;">
-                        <div class="pane-body">
-                            <h2>Slides...</h2>
-                        </div>
-                    </div>
+            <div class="col-md-6">
+                <div class="jumbotron">
+                    <h5>Você é responsável por ela?</h5>
+                    <a class="btn btn-success btn-lg btn-block" id="btn-cadastre" ng-click="vm.register()">Cadastre-se</a>
+                    <h5>Ou conhece alguém que seja coordenador e ou responável?</h5>
+                    <a class="btn btn-primary btn-lg btn-block" ng-click="vm.spread()">Envie ao amigo</a>
                 </div>
-                <div class="col-md-6">
-                    <div class="jumbotron">
-                        <h5>Você é responsável por ela?</h5>
-                        <a class="btn btn-success btn-lg btn-block" id="btn-cadastre" ng-click="vm.register()">Cadastre-se</a>
-                        <h5>Ou conhece alguém que seja coordenador e ou responável?</h5>
-                        <a class="btn btn-primary btn-lg btn-block" ng-click="vm.spread()">Envie ao amigo</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="section3">
+        <div class="container">
+            <h1>Apoie</h1>
+            <h3>Ajude-nos a ajudar.</h3>
+            <div class="col-lg-4">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <p>Curta, compartilhe! Avise seus amigos.</p><br>
+                        <img class="icons-apoie" src="../assets/img/support/spread.png" alt="Viralize essa idéia com todos!"><br>
+                    </div>
+                    <div class="panel-footer">
+                        <a class="btn btn-warning btn-lg btn-block" ng-click="vm.spread()">Divulgue</a>
                     </div>
                 </div>
             </div>
-
-        </section>
-
-        <section class="section" id="section3">
-            <div class="container">
-                <h1>Apoie</h1>
-                <h3>Ajude-nos a ajudar.</h3>
-                <div class="col-lg-4">
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                            <p>Curta, compartilhe! Avise seus amigos.</p><br>
-                            <img class="icons-apoie" src="../assets/img/support/spread.png" alt="Viralize essa idéia com todos!"><br>
-                        </div>
-                        <div class="panel-footer">
-                            <a class="btn btn-warning btn-lg btn-block" ng-click="vm.spread()">Divulgue</a>
-                        </div>
+            <div class="col-lg-4">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <p>Seja nosso Parceiro!</p><br>
+                        <img class="icons-apoie" src="../assets/img/support/foment.png" alt="Acredite nessa idéia com todo seu coração!"><br>
                     </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                            <p>Seja nosso Parceiro!</p><br>
-                            <img class="icons-apoie" src="../assets/img/support/foment.png" alt="Acredite nessa idéia com todo seu coração!"><br>
-                        </div>
-                        <div class="panel-footer">
-                            <a class="btn btn-warning btn-lg btn-block" ng-click="vm.foment()">Fomente</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                            <p>Participe da evolução desta ferramenta.</p><br>
-                            <img class="icons-apoie" src="../assets/img/support/develop.png" alt="Construa algo do bem, que seja à vera, sempre!"><br>
-                        </div>
-                        <div class="panel-footer">
-                            <a class="btn btn-warning btn-lg btn-block" ng-click="vm.developWithUs()">Desenvolva conosco</a>
-                        </div>
+                    <div class="panel-footer">
+                        <a class="btn btn-warning btn-lg btn-block" ng-click="vm.foment()">Fomente</a>
                     </div>
                 </div>
             </div>
-        </section>
+            <div class="col-lg-4">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <p>Participe da evolução desta ferramenta.</p><br>
+                        <img class="icons-apoie" src="../assets/img/support/develop.png" alt="Construa algo do bem, que seja à vera, sempre!"><br>
+                    </div>
+                    <div class="panel-footer">
+                        <a class="btn btn-warning btn-lg btn-block" ng-click="vm.developWithUs()">Desenvolva conosco</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <section class="section" id="section4">
+    <section class="section" id="section4">
+        <div class="container">
+            <h1>Parceiros</h1>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="panel panel-default panel-partners">
+                        <div class="panel-body">
+                            <img class="logo-partners" src="../assets/img/partners/1.png" title="Kasd Contábil" alt="Kasd Organização Contábil">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="panel panel-default panel-partners">
+                        <div class="panel-body">
+                            <img class="logo-partners" src="../assets/img/partners/1.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="panel panel-default panel-partners">
+                        <div class="panel-body">
+                            <img class="logo-partners" src="../assets/img/support/foment.png" title="Torne-se nosso parceiro!" alt="Torne-se nosso parceiro">
+                        </div>
+                        <a ng-click="vm.foment()"><p class="pull-right" style="cursor:pointer;"><small>Torne-se um</small></p></a>
+                    </div>
+                </div>
+            </div>
+            <h2>Colaboradores</h2>
+            <p>Developers solidários juntos na nossa evolução!</p>
+            <div id="org-members">
+                <div class="loader">
+                    <div class="bubble"></div>
+                    <div class="bubble"></div>
+                    <div class="bubble"></div>
+                    <div class="bubble"></div>
+                </div>
+            </div>
+            <h4 class="text-info" id="msg-agradecimento">Agradecemos o apoio de todos que acreditam nessa iniciativa e, de alguma forma mentalizam<br>o caminho próspero que devemos seguir para servir à humanidade com esta aplicação.</h4>
+        </div>
+    </section>
+
+    <footer class="section fp-auto-height" id="section5">
+        <div class="footer-top">
             <div class="container">
-                <h1>Parceiros</h1>
                 <div class="row">
-                    <div class="col-sm-4">
-                        <div class="panel panel-default panel-parceiros">
-                            <div class="panel-body">
-                                <img class="logo-parceiros" src="../assets/img/partners/1.png" title="Kasd Contábil" alt="Kasd Organização Contábil">
-                            </div>
-                        </div>
+                    <div class="col-md-7">
+                        <p><strong>Ongbook.org</strong> - Catálogo de Entidades Sociais e suas Necessidades - CNPJ: 23.421.441/0001­-62</p>
+                        <p>Av. Augusto Emílio Estelita Lins, 501 - Jardim Camburi - Vitória-ES / Cep: 29.090-590</p>
+                        <p><a href="tel:2731451212">(27) 3145-1212</a> - <a href="mailto:contato@ongbook.org">contato@ongbook.org</a> ou pelo <a ng-click="vm.foment()" style="cursor:pointer;">formulário</a>.</p>
                     </div>
-                    <div class="col-sm-4">
-                        <div class="panel panel-default panel-parceiros">
-                            <div class="panel-body">
-                                <img class="logo-parceiros" src="../assets/img/partners/1.png">
-                            </div>
-                        </div>
+                    <div class="col-md-1">
+                        <div class="fb-like" data-href="https://ongbook.org" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="false"></div>
+                        <div id="fb-root"></div>
+                        <script>(function(d, s, id) {
+                            var js, fjs = d.getElementsByTagName(s)[0];
+                            if (d.getElementById(id)) return;
+                            js = d.createElement(s); js.id = id;
+                            js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.10";
+                            fjs.parentNode.insertBefore(js, fjs);
+                        }(document, 'script', 'facebook-jssdk'));</script>
                     </div>
-                    <div class="col-sm-4">
-                        <div class="panel panel-default panel-parceiros">
-                            <div class="panel-body">
-                                <img class="logo-parceiros" src="../assets/img/support/foment.png" title="Torne-se nosso parceiro!" alt="Torne-se nosso parceiro">
-                            </div>
-                            <a ng-click="vm.foment()"><p class="pull-right" style="cursor:pointer;"><small>Torne-se um</small></p></a>
+                    <div class="col-md-4">
+                        <div class="input-group input-group-sm">
+                            <input type="text" class="form-control" placeholder="Assine nossa newsletter. ❣ ☮ ❥">
+                            <span class="input-group-btn">
+                                <button class="btn btn-secondary" type="button">Inscrever!</button>
+                            </span>
                         </div>
-                    </div>
-                </div>
-                <h2>Colaboradores</h2>
-                <p>Developers solidários juntos na nossa evolução!</p>
-                <div id="org-members">
-                    <div class="loader">
-                        <div class="bubble"></div>
-                        <div class="bubble"></div>
-                        <div class="bubble"></div>
-                        <div class="bubble"></div>
-                    </div>
-                </div>
-                <h4 class="text-info" id="msg-agradecimento">Agradecemos o apoio de todos que acreditam nessa iniciativa e, de alguma forma mentalizam<br>o caminho próspero que devemos seguir para servir à humanidade com esta aplicação.</h4>
-            </div>
-        </section>
-
-        <section class="section fp-auto-height" id="section5">
-            <div class="footer-top">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <h3>Onde estamos?</h3>
-                            <div>
-                                <i class="fa fa-map-marker"></i>
-                                <p>
-                                    <span>Rua 25 de Março S/N, B. Santo Antônio</span> Santa Teresa - ES
-                                </p>
-                            </div>
-
-                            <div>
-                                <i class="fa fa-phone"></i>
-                                <p>(27) 3145 - 1200</p>
-                            </div>
-
-                            <div>
-                                <i class="fa fa-envelope"></i>
-                                <p><a href="mailto:contato@ongbook.org">contato@ongbook.org</a></p>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <iframe class="fmap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1876.6724677885798!2d-40.657600862032346!3d-19.825352797283937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb7764cb2fb7681%3A0x3a971f1a25c069a0!2sSanto+Ant%C3%B4nio+do+Cana%C3%A3%2C+Santa+Teresa+-+ES!5e0!3m2!1spt-BR!2sbr!4v1480697591033"
-                                frameborder="0" style="border:0" allowfullscreen>
-                            </iframe>
-                        </div>
-                        <div class="col-md-4">
-                            <h3>Newsletter</h3>
-                            <p>Inscreva-se na nossa newsletter para ficar por dentro das novidades e ajudar nossa causa.</p>
-                            <br/>
-                            <div class="input-group">
-                                <input type="text" class="form-control" placeholder="nome@email.com">
-                                <span class="input-group-btn">
-                                    <button class="btn btn-secondary" type="button">Inscrever!</button>
-                                </span>
-                            </div>
-                        </div>
+                        <nav>
+                            <a href="http://facebook.com/Ongbook" title="Facebook" target="_blank"><i class="fa fa-facebook fa-1x" aria-hidden="true"></i></a>
+                            <a href="http://github.com/Ongbook" title="Github" target="_blank"><i class="fa fa-github-alt fa-1x" aria-hidden="true"></i></a>
+                            <a href="http://instagram.com/Ongbook" title="Instagram" target="_blank"><i class="fa fa-instagram fa-1x" aria-hidden="true"></i></a>
+                            <a href="https://www.youtube.com/channel/UCGdmvXlSwUD9DZYKAaoCR2g" title="Youtube" target="_blank"><i class="fa fa-youtube-play fa-1x" aria-hidden="true"></i></a>
+                            <a href="http://linkedin.com/company/ongbook" title="Linkedin" target="_blank"><i class="fa fa-linkedin fa-1x" aria-hidden="true"></i></a>
+                            <a href="http://trello.com/ongbook" title="Trello" target="_blank"><i class="fa fa-trello fa-1x" aria-hidden="true"></i></a>
+                            <a href="http://ongbook.slack.com" title="Slack" target="_blank"><i class="fa fa-slack fa-1x" aria-hidden="true"></i></a>
+                            <a href="http://twitter.com/_Ongbook" title="Twitter" target="_blank"><i class="fa fa-twitter fa-1x" aria-hidden="true"></i></a>
+                        </nav>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </footer>
 
-    </div>
-    <!-- End: #fullPage -->
 </div>
-<!-- End: homeCtrl -->
+<!-- End: #fullPage -->

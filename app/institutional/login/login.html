@@ -1,39 +1,35 @@
 <div id="background-login">
-  <div class="container">
-    <div class="card card-container">
-      <!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
-      <img id="profile-img-card" class="" src="assets/img/logo.png"/>
-      <p id="profile-name" class="profile-name-card"></p>
-      <form novalidate name="form" class="form-signin">
-        <div ng-messages="form.email.$error" ng-if="form.email.$touched || vm.error">
-          <div ng-messages-include="app/institutional/login/validate/email.html"></div>
-        </div>
-        <div ng-messages="form.password.$error" ng-if="form.password.$touched || vm.error">
-          <div ng-messages-include="app/institutional/login/validate/password.html"></div>
-        </div>
+    <div class="container">
+        <div class="card card-container">
+            <!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
+            <img id="profile-img-card" src="assets/img/logo.png"/>
+            <p id="profile-name" class="profile-name-card"></p>
+            <form novalidate name="form" class="form-signin">
+                <div ng-messages="form.email.$error" ng-if="form.email.$touched || vm.error">
+                  <div ng-messages-include="app/institutional/login/validate/email.html"></div>
+              </div>
+              <div ng-messages="form.password.$error" ng-if="form.password.$touched || vm.error">
+                  <div ng-messages-include="app/institutional/login/validate/password.html"></div>
+              </div>
 
-        <span id="reauth-email" class="reauth-email"></span>
-        <input type="text" id="email" name="email" class="form-control" placeholder="Email" autofocus
-        ng-model="cad.identifier"
-
-        required>
-        <input type="password" id="password" name="password" class="form-control" placeholder="Senha"
-        ng-model="cad.password"
-        required>
-        <div id="remember" class="checkbox">
-          <label>
-            <input type="checkbox" value="remember-me"> Lembrar credenciais
-          </label>
-        </div>
-        <input class="btn btn-lg btn-primary btn-block btn-signin" type="submit"
-        ng-click="form.$valid ? vm.auth(cad) : vm.showError(true)">
-      </input>
+              <span id="reauth-email" class="reauth-email"></span>
+              <input type="text" id="email" name="email" class="form-control" placeholder="Email" autofocus
+              ng-model="cad.identifier" required>
+              <input type="password" id="password" name="password" class="form-control" placeholder="Senha" ng-model="cad.password" required>
+              <div id="remember" class="checkbox">
+                  <label>
+                    <input type="checkbox" value="remember-me"> Lembrar credenciais
+                </label>
+            </div>
+            <input class="btn btn-lg btn-primary btn-block btn-signin" type="submit"
+            ng-click="form.$valid ? vm.auth(cad) : vm.showError(true)">
+        </input>
     </form><!-- /form -->
     <a href class="forgot-password">
-      Esqueceu sua senha?
+        Esqueceu sua senha?
     </a>
     <br/>
     <a ui-sref="institutional">VOLTAR</a>
-  </div><!-- /card-container -->
+</div><!-- /card-container -->
 </div><!-- /container -->
 </div>
